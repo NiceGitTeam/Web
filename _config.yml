@@ -85,7 +85,10 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENCE
-  - [vendor]
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # -----------
 # CloudCannon
