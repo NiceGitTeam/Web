@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Hydra Template
+title: NiceGit
 url: "http://www.nicegit.com"
 baseurl:
 google_analytics_key: UA-105229982-2
@@ -94,15 +94,15 @@ exclude:
 # CloudCannon
 
 social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
+  # - Facebook
+  # - Google Plus
+  # - Instagram
+  # - LinkedIn
+  # - Pinterest
+  # - Tumblr
+  # - Twitter
+  # - YouTube
+  # - RSS
 
 _comments:
   map: Update the map location and display settings.
