@@ -1,7 +1,7 @@
 ---
 title: Contact
-heading: Get in touch today
-description: We'd love to help you improve your sales.
+heading: Get in touch
+description: We'd love to hear what you think
 
 map:
   latitude: -45.8787605
@@ -9,35 +9,20 @@ map:
   address: "1 George Street, Dunedin, New Zealand"
   zoom: 13
 ---
-<div class="map" id="map"></div>
+<!-- <div class="map" id="map"></div> -->
 
 
 <div class="contact-box">
-	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="support@example.com" />
-		<input type="text" name="_gotcha" style="display: none;">
-
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
-
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
-
-		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
-
-		<input type="submit" value="Send Message" />
-	</form>
-
 	<div class="contact-details">
-		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+		<!-- <h3 class="editable">Address</h3>
+		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address> -->
 
 		<h3 class="editable">Email</h3>
-		<p><a href="mailto:support@example.com">support@example.com</a></p>
+		<p><a href="mailto:nicegit@smartcasual.cc">nicegit@smartcasual.cc</a></p>
 	</div>
 </div>
 
+{% if false %}
 <script type="text/javascript">
 	window.mapData = {{ page.map | jsonify }};
 
@@ -176,3 +161,4 @@ map:
 	}
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+{% endif %}
