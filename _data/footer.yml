@@ -1,6 +1,6 @@
 - links:
-  - name: Pricing
-    link: /pricing/
+#   - name: Pricing
+#     link: /pricing/
   # - name: Blog
   #   link: /blog/
   # - name: About
@@ -12,6 +12,6 @@
   #   link: /
   #   new_window: true
   - name: Sign Up
-    link: /
-    new_window: true
+    link: /#sign-up
+    new_window: false
 - links:
