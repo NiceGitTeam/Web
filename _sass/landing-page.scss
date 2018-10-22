@@ -46,6 +46,11 @@
 	}
 }
 
+// Hack to crop animated gif
+.open-github {
+	clip-path: inset(0px 0px 2px 0px);
+}
+
 
 @media #{$desktop} {
 	.flex {
