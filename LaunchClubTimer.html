@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Launch Club Timer</title>
+    <style>
+        body {
+            margin: 0;
+            padding-left: 100px;
+            padding-top: 60px;
+            background-color: #74929f;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+        }
+
+        #container {
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        #timer {
+            color: #fff;
+            text-align: left;
+            font-weight: bold;
+            line-height: 1;
+            font-size: min(25vh, 20vw);
+            transform-origin: left top;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="timer">1</div>
+    </div>
+
+    <script>
+        const funnyMessages = [
+            "50",
+            "50",
+            "51",
+            "51",
+            "52",
+            "52",
+            "53",
+            "53",
+            "54",
+            "54",
+            "54 and a half",
+            "54 and a half",
+            "54 and three quarters",
+            "54 and three quarters",
+            "Buffering..",
+            "Buffering...",
+            "Buffering.....",
+            "Buffering........",
+            "Sponsored by Squarespace",
+            "Nearly there...",
+            "60"
+        ];
+
+        let startTime = Date.now();
+        let currentSecond = 1;
+        let funnyIndex = 0;
+
+        function adjustTextSize() {
+            const container = document.getElementById('container');
+            const timer = document.getElementById('timer');
+            const scale = Math.min(1, container.clientHeight / timer.offsetHeight);
+            timer.style.transform = `scale(${scale})`;
+        }
+
+        function updateTimer() {
+            const elapsed = ((Date.now() - startTime) / 1000) + 0;
+            
+            if (elapsed >= 70) {
+                document.getElementById('timer').textContent = '60';
+                adjustTextSize();
+                return;
+            }
+
+            if (elapsed < 50) {  // Changed from 55 to 50
+                currentSecond = Math.floor(elapsed) + 1;
+                document.getElementById('timer').textContent = currentSecond;
+                adjustTextSize();
+                requestAnimationFrame(updateTimer);
+            } else {
+                // Start showing funny messages
+                const funnyMessageIndex = Math.floor(elapsed - 50);  // Changed from (elapsed - 55) / 1.5 to (elapsed - 50) / 2
+                if (funnyMessageIndex < funnyMessages.length) {
+                    document.getElementById('timer').textContent = funnyMessages[funnyMessageIndex];
+                    adjustTextSize();
+                }
+                requestAnimationFrame(updateTimer);
+            }
+        }
+
+        window.addEventListener('resize', adjustTextSize);
+        // Start the timer
+        updateTimer();
+    </script>
+</body>
+</html>
