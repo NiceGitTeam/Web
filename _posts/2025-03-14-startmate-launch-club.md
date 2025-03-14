@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NiceGit Selected for Startmate Launch Club!"
+title: "NiceGit selected for Startmate Launch Club!"
 author_staff_member: dan
 categories: business startup startmate
 excerpt_separator: <!--more-->
