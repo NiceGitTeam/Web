@@ -19,6 +19,8 @@ The [Startmate team](https://www.startmate.com/mentors) brings an incredible wea
 
 I'm also excited about working alongside the other Launch Club founders. I've yet to see the full intake list, but have already made connections with some [very cool looking teams](https://www.heali.com/).
 
+Pre-work includes watching the [Stanford Uni / Y Combinator 'How to Start a Startup' lecture series](https://www.youtube.com/watch?v=CBYhVcO4WgI&list=PL5q_lef6zVkaTY_cT1k7qFNF2TidHCe-1&index=1). It's about 15 hours of densely packed advice, but based on the first few sessions, incredibly useful information. Many of the specific points have made their way into the 'standard' tech startup playbook, so it's cool to be going back close to the source.
+
 Over the next 8 weeks, I'll be:
 
 - Conducting in-depth interviews with creative teams about their collaboration challenges
