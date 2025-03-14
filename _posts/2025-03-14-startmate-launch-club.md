@@ -2,7 +2,7 @@
 layout: post
 title: "NiceGit Selected for Startmate Launch Club!"
 author_staff_member: dan
-tags: business startup startmate
+categories: business startup startmate
 excerpt_separator: <!--more-->
 ---
 
