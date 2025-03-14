@@ -2,8 +2,7 @@
 # Site
 
 title: NiceGit
-url: "http://www.nicegit.com"
-baseurl:
+url: "https://www.nicegit.com"
 google_analytics_key: UA-105229982-2
 google_maps_javascript_api_key:
 disqus_shortname:
@@ -12,8 +11,8 @@ disqus_shortname:
 logo: /siteicon.png
 description: Product marketing template for Jekyll.
 author:
-  name:
-  email:
+  name: Dan
+  email: dan@nicegit.com
   twitter: # twitter username without the @ symbol
 social:
   name: Hydra Template
@@ -27,7 +26,7 @@ timezone: Etc/UTC
 
 collections:
   staff_members:
-    _hide_content: true
+    output: true
 
 paginate: 10
 paginate_path: "/blog/:num/"

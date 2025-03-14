@@ -2,6 +2,7 @@
 layout: post
 title:  "NiceGit Lives!"
 featured_image: "/images/posts/Two Laptops.jpg"
+author_staff_member: dan
 tags: business development
 excerpt_separator: <!--more-->
 ---
