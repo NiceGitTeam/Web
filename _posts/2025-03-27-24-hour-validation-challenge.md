@@ -42,3 +42,10 @@ It's great to see a simple action leading to tangible results though.
 
 ![Site visits in Google Analytis](/images/posts/Apollo Analytics.png)
 
+## _27 March 2025, 1pm_ Working in public
+
+As I was creating [a LinkedIn post](https://www.linkedin.com/posts/danborthwick_b2b-sales-platform-powered-by-ai-apollo-activity-7310844881562701824-eR9O?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABfd1QBjjISAXzZeQ5sewbuGLcS8cXLYys) to 'live blog' progress, I realised this would also be a good test for the current NiceGit prototype build itself. NiceGit.com is built using a simple GitHub Pages site (based on the beautifully simple Jekyll framework). Since the whole projects is a Git repository, I created a quick build of NiceGit for the project (the project is currently hardcoded) and have been using it ever since to post these updates! I've been using NiceGit exclusively in this way ('dogfooding' my own product) since the end of last week and so far it's been handling this simple use case really well. (Please excuse the broken preview in the screenshot, minor issue with cropping the previews of nested files! It's gone into the backlog.)
+
+![NiceGit screenshot of this very post](/images/posts/Apollo Analytics.png)
+
+Next step, set up a Stripe payment page...
