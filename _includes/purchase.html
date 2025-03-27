@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="editable"><strong>Sign up</strong> for NiceGit Beta</h2>
+    <p>By signing up for the Beta program you'll get free insider access to early releases.</p>
+    <p>We'd love to hear your feedback but there's no obligation and we won't contact you for any other reason than to let you know when NiceGit releases are available.</p>
+
+    <form action="/charge" method="POST">
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="your_publishable_key"
+            data-amount="0"
+            data-name="NiceGit Beta"
+            data-description="Beta Program Registration"
+            data-image="/path/to/your/logo.png"
+            data-locale="auto"
+            data-zip-code="true"
+            data-email-address="true">
+        </script>
+    </form>
+</div>
