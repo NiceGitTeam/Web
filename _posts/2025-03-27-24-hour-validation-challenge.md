@@ -30,3 +30,15 @@ Last night (26/3) I had an hour (while also making a Toad in the Hole for dinner
 
 ![First email sequence](/images/posts/Apollo Sequence.png)
 
+## _27 March 2025, 12pm_ Overnight results
+
+Overnight, 49 emails were delivered (of the 100 I scheduled). I can actually see them in my 'Sent' box in Gmail which is cool!
+
+The call to action is the Sign Up page of the NiceGit website (https://nicegit.com/#sign-up). As of now I've yet to see any new sign ups, but traffic to the website has seen 28 new visitors, which would be a great result. I suspect that at least some of these 'visitors' are email clients doing strange things to open the page to generate previews, protect privacy etc. Time spent on the site is very low!
+
+It's great to see a simple action leading to tangible results though.
+
+(btw the Toad in the Hole also went down very well with my son)
+
+![Site visits in Google Analytis](/images/posts/Apollo Analytics.png)
+
