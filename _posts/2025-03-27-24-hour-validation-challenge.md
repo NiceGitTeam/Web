@@ -14,13 +14,13 @@ I'll be posting progress updates to this page over the next 24h and then any res
 
 <!--more-->
 
-## _26 March 2025, 8pm_ The world's roughest cold outreach campaign
+## _Wednesday, 8pm_ - The world's roughest cold outreach campaign
 
-Last night (26/3) I had an hour (while also making a Toad in the Hole for dinner) to setup up the cold outreach campaign. Sign up and basic setup was easy enough, the main steps:
+Last night (Wednesday) I had an hour (while also making a Toad in the Hole for dinner) to setup up the cold outreach campaign. Sign up and basic setup was easy enough, the main steps:
 
 - Give Apollo full access to a Gmail account (had to take off my security officer hat for this one!)
 
-- Create a 'Sequence' of emails for cold outreach. I used Apollo's AI to generate a draft sequence of three emails. A nice feature is you can just enter your product's website (e.g. https://nicegit.com) and it will scan most of the relevant info it needs. The generated emails were surprisingly bare, around 5-10 sentences of pure text. It was recommended not to include images, which was an interesting learning.
+- Create a 'Sequence' of emails for cold outreach. I used Apollo's AI to generate a draft sequence of three emails. A nice feature is you can just enter your product's website (e.g. <https://nicegit.com>) and it will scan most of the relevant info it needs. The generated emails were surprisingly bare, around 5-10 sentences of pure text. It was recommended not to include images, which was an interesting learning.
 
 - Create a 'List' of people by searching Apollo's database (presumably compiled mostly by LinkedIn scraping?). I chose to target designers, content writers and digital artists at senior level.
 
@@ -30,11 +30,11 @@ Last night (26/3) I had an hour (while also making a Toad in the Hole for dinner
 
 ![First email sequence](/images/posts/Apollo Sequence.png)
 
-## _27 March 2025, 12pm_ Overnight results
+## _Thursday, 12pm_ - Overnight results
 
 Overnight, 49 emails were delivered (of the 100 I scheduled). I can actually see them in my 'Sent' box in Gmail which is cool!
 
-The call to action is the Sign Up page of the NiceGit website (https://nicegit.com/#sign-up). As of now I've yet to see any new sign ups, but traffic to the website has seen 28 new visitors, which would be a great result. I suspect that at least some of these 'visitors' are email clients doing strange things to open the page to generate previews, protect privacy etc. Time spent on the site is very low!
+The call to action is the Sign Up page of the NiceGit website (<https://nicegit.com/#sign-up>). As of now I've yet to see any new sign ups, but traffic to the website has seen 28 new visitors, which would be a great result. I suspect that at least some of these 'visitors' are email clients doing strange things to open the page to generate previews, protect privacy etc. Time spent on the site is very low!
 
 It's great to see a simple action leading to tangible results though.
 
@@ -42,10 +42,28 @@ It's great to see a simple action leading to tangible results though.
 
 ![Site visits in Google Analytis](/images/posts/Apollo Analytics.png)
 
-## _27 March 2025, 1pm_ Working in public
+## _Thursday, 1pm_ - Working in public
 
 As I was creating [a LinkedIn post](https://www.linkedin.com/posts/danborthwick_b2b-sales-platform-powered-by-ai-apollo-activity-7310844881562701824-eR9O?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABfd1QBjjISAXzZeQ5sewbuGLcS8cXLYys) to 'live blog' progress, I realised this would also be a good test for the current NiceGit prototype build itself. NiceGit.com is built using a simple GitHub Pages site (based on the beautifully simple Jekyll framework). Since the whole projects is a Git repository, I created a quick build of NiceGit for the project (the project is currently hardcoded) and have been using it ever since to post these updates! I've been using NiceGit exclusively in this way ('dogfooding' my own product) since the end of last week and so far it's been handling this simple use case really well. (Please excuse the broken preview in the screenshot, minor issue with cropping the previews of nested files! It's gone into the backlog.)
 
-![NiceGit screenshot of this very post](/images/posts/Apollo Analytics.png)
+![NiceGit screenshot of this very post](/images/posts/Validation Challenge Screenshot.png)
 
 Next step, set up a Stripe payment page...
+
+## _Thursday, 4pm_ - Setting up a payments experiment
+
+The goal of the challenge is to 'validate your idea as quickly as possible'. The gold standard being to find people to pay atual real money.
+
+To this end, I've just set up a Stripe payments page for a 'NiceGit Early Adopter Package'. Setting up a new Stripe account and creating the products, pricing etc. was super easy and took under an hour (for full transparency, I'm fairly familiar with Stripe, and I'm also a registered Sole Trader which helps).
+
+Next I need to give users a way to actually pay. Rather than a full Stripe integration I've opted to use a simple Buy Button here on NiceGit.com, then let Stripe provide the actual checkout page etc. Using [Stripe's Get Started guide](https://docs.stripe.com/no-code/get-started))
+
+Quick break for a haircut (it's the Melbourne Launch Club welcome party tonight, gotta look fresh) and a falafel wrap, then it's back to Stripe. Had to verify my identify using my passport which might take 1-3 days and be a potential roadblock, but got it done, then got to work integrating the Buy Button on the website.
+
+Another hour of tinkering around and [the Purchase Panel](/#purchase) is now live on the website. Clicking [the Buy button](/#purchase) (highly recommended, although perhaps an ambitious ask if you've read the rest of this page!) directs the user to a Stripe-hosted page where, at least in theory, they should be able to purchase the 'NiceGit Early Adopters Package'.
+
+Ok, time to head into Melbourne for the Launch Club Welcome party. With a fair wind and a seat on the train I might even be able to send out another email campaign with a more targeted call to action to see if this is enough for anyone to part with actual dollars. I strongly suspect not yet, especially given the state of the product page, but nothing ventured, nothing gained. Whatever happens, all of this setup will be helpful in a few weeks once the product page and the actual app itself are a little further along.
+
+[![The purchase panel](/images/posts/Purchase Page Dev.png)](/#purchase)
+
+Hehe, just as I was about to hit publish on the payment page (and this blog post), my son came in to show me the newly created Patreon page for his rock band, _Bladenrock_. I thought I was doing well today. He's ten years old!

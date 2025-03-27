@@ -1,7 +1,7 @@
 .bottom-cta {
 	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%);
 	color: #fff;
-	text-align: center;
+	// text-align: center;
 	margin: 0;
 	padding: 100px 0;
 
@@ -68,4 +68,8 @@
 	.content section:nth-child(even) .flex {
 		flex-direction: row-reverse;
 	}
+}
+
+.buy-button {
+	text-align: center;
 }

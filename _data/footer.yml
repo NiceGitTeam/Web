@@ -11,7 +11,10 @@
   # - name: Login
   #   link: /
   #   new_window: true
-  - name: Sign Up
-    link: /#sign-up
+#   - name: Sign Up
+#     link: /#sign-up
+#     new_window: false
+  - name: Purchase
+    link: /#purchase/
     new_window: false
-- links:
+# - links:

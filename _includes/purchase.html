@@ -1,19 +1,26 @@
-<div class="container">
-    <h2 class="editable"><strong>Sign up</strong> for NiceGit Beta</h2>
-    <p>By signing up for the Beta program you'll get free insider access to early releases.</p>
-    <p>We'd love to hear your feedback but there's no obligation and we won't contact you for any other reason than to let you know when NiceGit releases are available.</p>
+<div class="container flex">
+	<div class="text">
+		<h2 class="editable">Purchase the <strong>NiceGit Early Adopters Package</strong></h2>
+		<p>Experience the simplicity and power of NiceGit today</p>
+		<ul>
+			<li>Full, lifetime access to the NiceGit Beta desktop app</li>
+			<li>Unlimited GitHub, Bitbucket, GitLab, or other repositories</li>
+			<li>Two years of free access to the NiceGit platform on launch</li>
+			<li>Bespoke customer support directly from the NiceGit development team</li>
+		</ul>
 
-    <form action="/charge" method="POST">
-        <script
-            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="your_publishable_key"
-            data-amount="0"
-            data-name="NiceGit Beta"
-            data-description="Beta Program Registration"
-            data-image="/path/to/your/logo.png"
-            data-locale="auto"
-            data-zip-code="true"
-            data-email-address="true">
-        </script>
-    </form>
+		<p><strong>Special Offer:</strong> Use the discount code <strong><code>early20</code></strong> to receive a 50% discount!</p>
+
+		We'd love to hear your feedback but there's no obligation and we won't contact you for any other reason than to let you know when NiceGit releases are available.
+	</div>
+	<div class="buy-button">
+		<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+		<div>
+		<stripe-buy-button buy-button-id="buy_btn_1R77PMJr8FCGWcJ7i5bKjStH"
+			publishable-key="pk_live_51R75G6Jr8FCGWcJ7IFFh7L5NEbPmZt2Wn03Or0PBg2O3BpXMQF2yroNOx9nxX9LPEeCW7zYdB427gcbMUWNqKUSe00CU1hEpx9">
+		</stripe-buy-button>
+	</div>
+	</div>
+</div>
 </div>

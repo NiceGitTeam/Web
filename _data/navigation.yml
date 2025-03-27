@@ -14,7 +14,11 @@
   link: /contact/
   new_window: false
   highlight: false
-- name: Sign Up
-  link: /#sign-up
+# - name: Sign Up
+#   link: /#sign-up
+#   new_window: false
+#   highlight: true
+- name: Purchase
+  link: /#purchase
   new_window: false
   highlight: true
