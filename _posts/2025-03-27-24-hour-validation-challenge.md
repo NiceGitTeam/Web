@@ -89,7 +89,7 @@ It took a little longer than AI-lead copy generation but just finished work on a
 
 I've just set it live so we'll see how it performs next week.
 
-Having set up the basics for running these campaigns, by far the biggest constraint is now the rate at which I can send emails without risking the @nicegit.com domain being labelled as overly spammy. It takes a while for domains to 'warm up' so right now Apollo is advising sending no more than 50 emails a day. This number will rise over the next couple of weeks so I'm looking forward to experimenting with a larger variety of email templates and audiences. From these point of view I'm really glad I started working on email outreach so early. It should be ready to scale up over the next couple of months as my marketing and product positioning changes kick in.
+Having set up the basics for running these campaigns, by far the biggest constraint is now the rate at which I can send emails without risking the @nicegit.com domain being labelled as overly spammy. It takes a while for domains to 'warm up' so right now Apollo is advising sending no more than 50 emails a day. This number will rise over the next couple of weeks so I'm looking forward to experimenting with a larger variety of email templates and audiences. From this point of view I'm really glad I started working on email outreach so early. It should be ready to scale up over the next couple of months as my marketing and product positioning changes kick in.
 
 Anyway, it's the end of the day and there are my family and fish and chips and waiting for me at the beach. I'll post some more results next week, thanks everyone (anyone?) who's made it this far with me. Have a great weekend!
 
