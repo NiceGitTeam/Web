@@ -82,3 +82,15 @@ The results of the first cold outreach campaign are now in. In the last 40 hours
 *_From past experience I take 'open rates' and 'click throughs' from email platforms with a huge pinch of salt. The email protocol has fundamentally no way for the sender to know when the recipient has done anything to an email, and nor should it. (We once successfully sued an airline based, in part, on this. But that's a story for another day!)_
 
 Given the roughness of the email copy, and of the product landing page, this is about what I was expecting. So this afternoon I'm going to try a more manual approach to creating the emails, with variations to target different professional groups, such as Data Scientists, Designers, etc. If there's time I'll do something similar to the website, perhaps even trying some different landing page, product and price variations.
+
+## _Friday, 4pm_ - Let's get personal
+
+It took a little longer than AI-lead copy generation but just finished work on a manually writted, more personal email template. This one starts with a brief account of my personal career journey and how I identified the problems that NiceGit aims to solve. It then gets into a more traditional problem/solution pattern, but still drawing a lot from personal experiences and avoiding overly generic language.
+
+I've just set it live so we'll see how it performs next week.
+
+Having set up the basics for running these campaigns, by far the biggest constraint is now the rate at which I can send emails without risking the @nicegit.com domain being labelled as overly spammy. It takes a while for domains to 'warm up' so right now Apollo is advising sending no more than 50 emails a day. This number will rise over the next couple of weeks so I'm looking forward to experimenting with a larger variety of email templates and audiences. From these point of view I'm really glad I started working on email outreach so early. It should be ready to scale up over the next couple of months as my marketing and product positioning changes kick in.
+
+Anyway, it's the end of the day and there are my family and fish and chips and waiting for me at the beach. I'll post some more results next week, thanks everyone (anyone?) who's made it this far with me. Have a great weekend!
+
+![Site visits in Google Analytis](/images/posts/Personal Email Template.png)
