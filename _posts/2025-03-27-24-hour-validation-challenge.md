@@ -67,3 +67,18 @@ Ok, time to head into Melbourne for the Launch Club Welcome party. With a fair w
 [![The purchase panel](/images/posts/Purchase Page Dev.png)](/#purchase)
 
 Hehe, just as I was about to hit publish on the payment page (and this blog post), my son came in to show me the newly created Patreon page for his rock band, _Bladenrock_. I thought I was doing well today. He's ten years old!
+
+## _Friday, 1pm_ - Pivoting to a more targeted, experimental approach
+
+[Ajay](https://www.linkedin.com/in/ajayvprakash/) never precisely specified when the 24 hours for the challenge specifically started from, so I'm going to take this as license to keep going! ;p
+
+The results of the first cold outreach campaign are now in. In the last 40 hours NiceGit has:
+
+- Delivered 91 cold outreach emails to senior level designers and artists =|
+- Apollo reports only a 5% open rate (excluding automated)* =(
+- However, the [NiceGit website](/) reports 99 new users in the same period =)
+- But no sales of the Early Adopter Package yet =(
+
+*_From past experience I take 'open rates' and 'click throughs' from email platforms with a huge pinch of salt. The email protocol has fundamentally no way for the sender to know when the recipient has done anything to an email, and nor should it. (We once successfully sued an airline based, in part, on this. But that's a story for another day!)_
+
+Given the roughness of the email copy, and of the product landing page, this is about what I was expecting. So this afternoon I'm going to try a more manual approach to creating the emails, with variations to target different professional groups, such as Data Scientists, Designers, etc. If there's time I'll do something similar to the website, perhaps even trying some different landing page, product and price variations.
