@@ -28,7 +28,7 @@ Last night (Wednesday) I had an hour (while also making a Toad in the Hole for d
 
 - The platform has been steadily sending emails from my account ever since!
 
-![First email sequence](/images/posts/Apollo Sequence.png)
+![First email sequence](/images/posts/Apollo Sequence.png){: class="small" }
 
 ## _Thursday, 12pm_ - Overnight results
 
@@ -40,13 +40,13 @@ It's great to see a simple action leading to tangible results though.
 
 (btw the Toad in the Hole also went down very well with my son)
 
-![Site visits in Google Analytis](/images/posts/Apollo Analytics.png)
+![Site visits in Google Analytis](/images/posts/Apollo Analytics.png){: class="small" }
 
 ## _Thursday, 1pm_ - Working in public
 
 As I was creating [a LinkedIn post](https://www.linkedin.com/posts/danborthwick_b2b-sales-platform-powered-by-ai-apollo-activity-7310844881562701824-eR9O?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABfd1QBjjISAXzZeQ5sewbuGLcS8cXLYys) to 'live blog' progress, I realised this would also be a good test for the current NiceGit prototype build itself. NiceGit.com is built using a simple GitHub Pages site (based on the beautifully simple Jekyll framework). Since the whole projects is a Git repository, I created a quick build of NiceGit for the project (the project is currently hardcoded) and have been using it ever since to post these updates! I've been using NiceGit exclusively in this way ('dogfooding' my own product) since the end of last week and so far it's been handling this simple use case really well. (Please excuse the broken preview in the screenshot, minor issue with cropping the previews of nested files! It's gone into the backlog.)
 
-![NiceGit screenshot of this very post](/images/posts/Validation Challenge Screenshot.png)
+![NiceGit screenshot of this very post](/images/posts/Validation Challenge Screenshot.png){: class="small" }
 
 Next step, set up a Stripe payment page...
 
@@ -64,7 +64,7 @@ Another hour of tinkering around and [the Purchase Panel](/#purchase) is now liv
 
 Ok, time to head into Melbourne for the Launch Club Welcome party. With a fair wind and a seat on the train I might even be able to send out another email campaign with a more targeted call to action to see if this is enough for anyone to part with actual dollars. I strongly suspect not yet, especially given the state of the product page, but nothing ventured, nothing gained. Whatever happens, all of this setup will be helpful in a few weeks once the product page and the actual app itself are a little further along.
 
-[![The purchase panel](/images/posts/Purchase Page Dev.png)](/#purchase)
+[![The purchase panel](/images/posts/Purchase Page Dev.png){: class="small" }](/#purchase)
 
 Hehe, just as I was about to hit publish on the payment page (and this blog post), my son came in to show me the newly created Patreon page for his rock band, _Bladenrock_. I thought I was doing well today. He's ten years old!
 
@@ -93,4 +93,27 @@ Having set up the basics for running these campaigns, by far the biggest constra
 
 Anyway, it's the end of the day and there are my family and fish and chips and waiting for me at the beach. I'll post some more results next week, thanks everyone (anyone?) who's made it this far with me. Have a great weekend!
 
-![Site visits in Google Analytis](/images/posts/Personal Email Template.png)
+![Site visits in Google Analytics](/images/posts/Personal Email Template.png){: class="small" }
+
+## Thursday 3rd April - Post mortem
+
+A week later and enough time has passed to start reviewing the results...
+
+### Less nice
+
+- No sales (yet)  
+  The 'Early Adopter Package' always felt like a big ask. My gut was that the landing page just isn't ready yet to convince people to part with actual cash money. I still love the idea of seeking revenue, so will give the page a refresh over the next couple of weeks, especially as more info comes in from customer interviews.  
+  ![Sales chart showing no sales](/images/posts/No%20Sales%20Yet.png){: class="small" }
+
+- Email rate limiting  
+  Apollo's rate limiting is strict. After the first two days its only been sending 5-10 emails a day to protect the reputation of @nicegit.com emails with spam filters. This is a good thing but I hadn't anticipated how limiting it would be to rapid iteration. With hindsight I could have mitigated to some extent by setting up a new 'burner' domain whose reputation didn't matter.
+
+### Nice
+
+- [nicegit.com](/) has seen 156 new users the site! That's more users than probably ever visited it before this week. I initially thought a lot of this might have been coming from my LinkedIn posting, but the demographics strongly suggest the majority of traffic is likely coming from the cold outreach emails. I've recently added [UTM tracking parameters](https://en.wikipedia.org/wiki/UTM_parameters) to the links in the emails which should confirm this.
+
+- Email rate limiting  
+  Despite rate limits hampering my attempts at rapid results (see above), the exercise has forced me to make a start on setting up cold outreach email for the longer term. Over the next few weeks I should be able to increase volumes significantly. I'm glad I ran into this problem now, not at a more critical point.
+
+- Apollo  
+  Apollo has turned out be quite a powerful tool. It's a little different to other email platforms I've used, but its focus on CRM and sales has already proved useful as I've used it to streamline my user interview pipeline, messaging around 25 personal contacts across email, LinkedIn and other channels and allowing me to keep track of the progress of each one. I initially used the Free Plan and am now on the Basic Plan which costs $59/month. I think I'll keep using it for at least the duration of Launch Club.
