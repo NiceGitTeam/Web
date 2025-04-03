@@ -110,10 +110,12 @@ A week later and enough time has passed to start reviewing the results...
 
 ### Nice
 
-- [nicegit.com](/) has seen 156 new users the site! That's more users than probably ever visited it before this week. I initially thought a lot of this might have been coming from my LinkedIn posting, but the demographics strongly suggest the majority of traffic is likely coming from the cold outreach emails. I've recently added [UTM tracking parameters](https://en.wikipedia.org/wiki/UTM_parameters) to the links in the emails which should confirm this.
+- [nicegit.com](/) has seen 156 new users visit the site! That's more users than probably ever visited it before this week. I initially thought a lot of this might have been coming from my LinkedIn posting, but the demographics strongly suggest the majority of traffic is likely coming from the cold outreach emails. I've recently added [UTM tracking parameters](https://en.wikipedia.org/wiki/UTM_parameters) to the links in the emails which should confirm this.
 
 - Email rate limiting  
   Despite rate limits hampering my attempts at rapid results (see above), the exercise has forced me to make a start on setting up cold outreach email for the longer term. Over the next few weeks I should be able to increase volumes significantly. I'm glad I ran into this problem now, not at a more critical point.
 
 - Apollo  
   Apollo has turned out be quite a powerful tool. It's a little different to other email platforms I've used, but its focus on CRM and sales has already proved useful as I've used it to streamline my user interview pipeline, messaging around 25 personal contacts across email, LinkedIn and other channels and allowing me to keep track of the progress of each one. I initially used the Free Plan and am now on the Basic Plan which costs $59/month. I think I'll keep using it for at least the duration of Launch Club.
+
+Thanks again to [Ajay Prakash](https://www.linkedin.com/in/ajayvprakash/) for inspiring myself and others to be bold and validate!
