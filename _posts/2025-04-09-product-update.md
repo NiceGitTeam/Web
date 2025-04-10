@@ -42,7 +42,7 @@ Thank you to everyone, friends, colleagues, Launch Club founders and new contact
 - Interestingly, a lot of designers believe that programmers would do a better job of working with image assets than they would. Meanwhile programmers often don't have much familiarity with image processing tools and are just winging it!
 - Most developers interviewed have expressed an interest in simpler tools than they currently use, but supporting more features than the current NiceGit client. Should NiceGit support these use cases, or focus on being the most streamlined experience possible?
 
-## What's Next
+## What's Next?
 
 Based on our research and your feedback, here's what we're focusing on for the next couple of weeks:
 
