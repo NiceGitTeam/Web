@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "NiceGit Selected for Startmate Pitch Night in Melbourne!"
+title: "NiceGit Selected for Startmate Pitch Night!"
 author: dan
 categories: [business, startup, startmate]
 excerpt_separator: <!--more-->
 ---
 
-I'm thrilled to announce that NiceGit has been selected to pitch at the upcoming Startmate Pitch Night in Melbourne! This is an exciting opportunity to share our vision for revolutionizing version control.
+I'm thrilled to announce that NiceGit has been selected to pitch at the upcoming Startmate Pitch Night in Melbourne! This is an exciting opportunity to share our vision for revolutionising version control.
 
 ![Startmate Pitch Night](/images/posts/Startmate Demo Day.jpeg)
 
@@ -20,7 +20,7 @@ Pitch Night is an annual showcase event where Startmate's most promising startup
 
 **Where:** Collins Street, Melbourne
 
-[RSVP Here to attend](https://lu.ma/PitchNightMelb?tk=c9u0zr) (DM me for a discount code)
+[RSVP here to attend](https://lu.ma/PitchNightMelb?tk=c9u0zr) (DM me for a discount code)
 
 ## What to Expect
 
