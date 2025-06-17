@@ -44,14 +44,13 @@ h3 {
 	margin: 20px 0 10px 0;
 }
 
-p, address {
+p, address, li {
 	font-size: 1.38em;
-	color: #666;
-	margin-bottom: 20px;
 	font-weight: 300;
-	line-height: 1.4em;
 }
 
-li {
-	font-weight: 300;
+p, address {
+	color: #666;
+	margin-bottom: 20px;
+	line-height: 1.4em;
 }

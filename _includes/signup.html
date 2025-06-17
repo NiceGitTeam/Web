@@ -1,19 +1,24 @@
 <div class="container">
-    <!-- If changing content, consider also changing content_type below -->
-    <h2 class="editable"><strong>Sign up</strong> for NiceGit Beta</h2>
-    <p>By signing up for the Beta program you'll get insider access to early releases.</p>
-    <p>We'd love to hear your feedback but there's no obligation and we won't contact you for any other reason than to let you know when NiceGit releases are available.</p>
+	<!-- If changing content, consider also changing content_type below -->
+	<h2 class="editable"><strong>Sign up</strong> for the NiceGit newsletter</h2>
+	<p>
+	<ul>
+		<li>Be the first to hear <strong>Beta program</strong> announcements and access test releases.</li>
+		<li>Stay up to date with the latest NiceGit news in our <strong>monthly(-ish) newsletter</strong>.</li>
+		<li>We'd love to hear your feedback but there's no obligation and we won't contact you for any other reason.</li>
+	</ul>
+	</p>
 
 <!-- Begin Mailchimp Signup Form -->
 <div id="mc_embed_signup">
-<form action="https://smartcasual.us16.list-manage.com/subscribe/post?u=d3f19beecbe8a9f7c7883d762&amp;id=9ba9fa95fe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d3f19beecbe8a9f7c7883d762_9ba9fa95fe" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
+	<form action="https://smartcasual.us16.list-manage.com/subscribe/post?u=d3f19beecbe8a9f7c7883d762&amp;id=9ba9fa95fe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		<!-- <div id="mc_embed_signup_scroll"> -->
+		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot sign ups-->
+		<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d3f19beecbe8a9f7c7883d762_9ba9fa95fe" tabindex="-1" value=""></div>
+		<div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+		</div>
+	</form>
 </div>
 
 <!--End mc_embed_signup-->
@@ -21,17 +26,17 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const signupForm = document.getElementById('mc-embedded-subscribe-form'); // Change to your form's ID
+	document.addEventListener('DOMContentLoaded', function () {
+		const signupForm = document.getElementById('mc-embedded-subscribe-form'); // Change to your form's ID
 
-        if (signupForm) {
-            signupForm.addEventListener('submit', function (event) {
-                // Send the sign_up event to Google Analytics
-                if (gtag) {
-                    gtag('event', 'sign_up', { 'method': 'website_form', 'content_type': 'beta_signup' });
-                    console.log('Sign up event tracked in Google Analytics');
-                }
-            });
-        }
-    });
+		if (signupForm) {
+			signupForm.addEventListener('submit', function (event) {
+				// Send the sign_up event to Google Analytics
+				if (gtag) {
+					gtag('event', 'sign_up', { 'method': 'website_form', 'content_type': 'beta_signup' });
+					console.log('Sign up event tracked in Google Analytics');
+				}
+			});
+		}
+	});
 </script>
