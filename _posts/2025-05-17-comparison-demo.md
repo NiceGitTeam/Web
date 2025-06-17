@@ -31,7 +31,7 @@ NiceGit maintains all the power of Git behind the scenes while presenting an int
 
 ## Ready to Try It Yourself?
 
-If you're interested in simplifying version control for your team, please [sign up to the NiceGit mailing list](/signup) to be the first to try NiceGit.
+If you're interested in simplifying version control for your team, please [sign up to the NiceGit mailing list](/#sign-up) to be the first to try NiceGit.
 
 ## Transcript
 
