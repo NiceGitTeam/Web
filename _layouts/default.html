@@ -10,10 +10,72 @@
 
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			#mc_embed_signup{clear:left; font:14px; width:100%;}
+
+			/* Dropdown styles */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			.dropdown-button {
+				display: inline-block;
+				cursor: pointer;
+			}
+
+			.dropdown-button i {
+				margin-left: 4px;
+				font-size: 0.8em;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #fff;
+				min-width: 180px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				border-radius: 3px;
+				margin-top: 5px;
+				left: 0;
+			}
+
+			.dropdown-content a {
+				color: #333;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+				border-bottom: 1px solid #eee;
+			}
+
+			.dropdown-content a:last-child {
+				border-bottom: none;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #f7f7f7;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			
+			@media (max-width: 700px) {
+				.dropdown-content {
+					position: static;
+					box-shadow: none;
+					margin-left: 20px;
+					width: 100%;
+				}
+				.dropdown {
+					display: block;
+				}
+			}
 		</style>
 
 		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
@@ -60,6 +122,25 @@
 				document.body.classList.toggle("nav-open");
 				return false;
 			};
+			
+			// Handle mobile dropdown navigation
+			document.addEventListener('DOMContentLoaded', function() {
+				if (window.innerWidth < 700) {
+					var dropdownButtons = document.querySelectorAll('.dropdown-button');
+					dropdownButtons.forEach(function(button) {
+						button.addEventListener('click', function(e) {
+							var content = this.nextElementSibling;
+							if (content.style.display === "block") {
+								content.style.display = "none";
+							} else {
+								content.style.display = "block";
+							}
+							e.preventDefault();
+							return false;
+						});
+					});
+				}
+			});
 		</script>
 		<!-- LinkedIn Insight Tag -->
 		<script type="text/javascript">
