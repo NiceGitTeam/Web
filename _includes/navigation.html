@@ -18,7 +18,7 @@
 				</a>
 				<div class="dropdown-content">
 					{% for sublink in link.subnav %}
-						<a href="{% include relative-src.html src=sublink.link %}" {% if sublink.new_window %}target="_blank"{% endif %}>
+						<a href="{% include relative-src.html src=sublink.link %}" class="dropdown-item" {% if sublink.new_window %}target="_blank"{% endif %}>
 							{{ sublink.name }}
 						</a>
 					{% endfor %}

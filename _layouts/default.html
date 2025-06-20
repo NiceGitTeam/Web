@@ -75,6 +75,15 @@
 				.dropdown {
 					display: block;
 				}
+				
+				.nav-open .dropdown,
+				.nav-open .dropdown-button {
+					display: block;
+				}
+				
+				body:not(.nav-open) .dropdown {
+					display: none;
+				}
 			}
 		</style>
 
@@ -125,21 +134,40 @@
 			
 			// Handle mobile dropdown navigation
 			document.addEventListener('DOMContentLoaded', function() {
-				if (window.innerWidth < 700) {
-					var dropdownButtons = document.querySelectorAll('.dropdown-button');
-					dropdownButtons.forEach(function(button) {
-						button.addEventListener('click', function(e) {
-							var content = this.nextElementSibling;
-							if (content.style.display === "block") {
-								content.style.display = "none";
-							} else {
-								content.style.display = "block";
-							}
-							e.preventDefault();
-							return false;
+				var dropdownButtons = document.querySelectorAll('.dropdown-button');
+				
+				function setupMobileNavigation() {
+					if (window.innerWidth < 700) {
+						dropdownButtons.forEach(function(button) {
+							// Remove existing listeners first to avoid duplicates
+							button.removeEventListener('click', toggleDropdown);
+							// Add click listener
+							button.addEventListener('click', toggleDropdown);
 						});
-					});
+					} else {
+						// Remove mobile click listeners when in desktop mode
+						dropdownButtons.forEach(function(button) {
+							button.removeEventListener('click', toggleDropdown);
+						});
+					}
 				}
+				
+				function toggleDropdown(e) {
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+					e.preventDefault();
+					return false;
+				}
+				
+				// Initial setup
+				setupMobileNavigation();
+				
+				// Re-setup on window resize
+				window.addEventListener('resize', setupMobileNavigation);
 			});
 		</script>
 		<!-- LinkedIn Insight Tag -->
