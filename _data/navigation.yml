@@ -2,19 +2,19 @@
 #   link: /pricing/
 #   new_window: false
 #   highlight: false
-- name: NiceGit for...
-  link: /#
-  new_window: false
-  highlight: false
-  subnav:
-    - name: Team Leads
-      link: /leads/
-      new_window: false
-      highlight: false
-    - name: Game Developers
-      link: /game-dev/
-      new_window: false
-      highlight: false
+# - name: NiceGit for...
+#   link: /#
+#   new_window: false
+#   highlight: false
+#   subnav:
+#     - name: Team Leads
+#       link: /leads/
+#       new_window: false
+#       highlight: false
+#     - name: Game Developers
+#       link: /game-dev/
+#       new_window: false
+#       highlight: false
 - name: Blog
   link: /blog/
   new_window: false
