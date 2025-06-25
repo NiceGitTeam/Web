@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NiceGit Selected for Startmate Pitch Night!"
-author: dan
+author_staff_member: dan
 categories: [business, startup, startmate]
 excerpt_separator: <!--more-->
 ---
