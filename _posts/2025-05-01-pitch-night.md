@@ -6,7 +6,7 @@ categories: [business, startup, startmate]
 excerpt_separator: <!--more-->
 ---
 
-I'm thrilled to announce that NiceGit has been selected to pitch at the upcoming Startmate Pitch Night in Melbourne! This is an exciting opportunity to share our vision for revolutionising version control.
+NiceGit has been selected to pitch at the upcoming Startmate Pitch Night in Melbourne! An exciting opportunity to share our vision for revolutionising version control.
 
 ![Startmate Pitch Night](/images/posts/Startmate Demo Day.jpeg)
 

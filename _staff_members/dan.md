@@ -1,7 +1,8 @@
 ---
-name: Dan
+name: Dan Borthwick
 position: Founder, CEO, CTO, Developer, Best Boy
 image_path: /images/authors/Dan 2023.jpg
+linkedin: danborthwick
 twitter:
-blurb:
+blurb: Dan Borthwick is NiceGit's founder and CEO
 ---

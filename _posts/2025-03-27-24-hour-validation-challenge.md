@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "24 Hours to Validate NiceGit"
-author: dan
+author_staff_member: dan
 categories: [startup, startmate]
 excerpt_separator: <!--more-->
 ---

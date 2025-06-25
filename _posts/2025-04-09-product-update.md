@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Product Update: New Features and User Interviews"
-author: dan
+author_staff_member: dan
 categories: product development startmate
 excerpt_separator: <!--more-->
 ---

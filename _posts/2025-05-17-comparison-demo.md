@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Our First Demo: NiceGit vs. Traditional Git"
-author: dan
+author_staff_member: dan
 categories: [product]
 excerpt_separator: <!--more-->
 ---

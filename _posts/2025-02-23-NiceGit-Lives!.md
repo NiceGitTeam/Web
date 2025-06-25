@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 
 ![Cross-disciplinary teams bridging the gap](/images/posts/Two Laptops.jpg)
 
-After an _...ahem..._ 'short' hiatus, I'm thrilled to announce that NiceGit is back, and with a clearer vision than ever!
+After an _...ahem..._ 'short' hiatus, NiceGit is back, and with a clearer vision than ever!
 
 <!--more-->
 Over the last few years I've had the privilege of leading incredible cross-disciplinary teams across a spectrum of cutting-edge projects - from Virtual Reality experiences and mobile apps to AI image processing and sound design. This hands-on experience has been eye-opening, and it's only reinforced my conviction that we need better tools for creative collaboration.
