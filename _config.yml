@@ -48,6 +48,7 @@ defaults:
       path: ""
       type: "staff_members"
     values:
+      layout: "staff_member"
       _options:
         image_path:
           width: 600

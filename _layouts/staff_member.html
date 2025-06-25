@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<div class="content">
+	<section class="staff-member-page">
+		<div class="container">
+			<div class="staff-member-profile">
+				<div class="profile-header">
+					<div class="staff-image">
+						<img src="{% include relative-src.html src=page.image_path %}" alt="{{ page.name }}">
+					</div>
+					<div class="staff-details">
+						<h2>{{ page.name }}</h2>
+						<p class="position">{{ page.position }}</p>
+						<div class="social-links">
+							{% if page.linkedin %}
+							<a href="https://www.linkedin.com/in/{{ page.linkedin }}" target="_blank" rel="noopener" class="linkedin-link">
+								<i class="fab fa-linkedin"></i> LinkedIn
+							</a>
+							{% endif %}
+							{% if page.twitter %}
+							<a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener" class="twitter-link">
+								<i class="fab fa-twitter"></i> Twitter
+							</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				
+				<div class="staff-content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<style>
+	.staff-member-page {
+		padding: 60px 0;
+	}
+	
+	.profile-header {
+		display: flex;
+		margin-bottom: 40px;
+	}
+	
+	.staff-image {
+		flex: 0 0 200px;
+		margin-right: 40px;
+	}
+	
+	.staff-image img {
+		width: 100%;
+		border-radius: 50%;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+	
+	.staff-details {
+		flex: 1;
+	}
+	
+	.staff-details h2 {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	
+	.staff-details .position {
+		font-size: 1.2em;
+		color: #666;
+		margin-bottom: 20px;
+	}
+	
+	.social-links a {
+		display: inline-block;
+		margin-right: 15px;
+		text-decoration: none;
+	}
+	
+	.staff-content {
+		line-height: 1.6;
+	}
+	
+	.staff-content h1 {
+		display: none; /* Hide the H1 from the markdown as we're using the page.name as the title */
+	}
+	
+	@media (max-width: 768px) {
+		.profile-header {
+			flex-direction: column;
+			text-align: center;
+		}
+		
+		.staff-image {
+			margin: 0 auto 20px;
+		}
+	}
+</style>
