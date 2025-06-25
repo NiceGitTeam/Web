@@ -9,19 +9,19 @@ priority: 1
 logo_images:
   - name: Mindset Health
     url: https://mindsethealth.com
-    image_path: /images/companies/mindset-health.png
+    image_path: /images/companies/mindset-health.svg
   - name: Pearlii
     url: https://www.forbes.com.au/news/innovation/how-to-fill-holes-in-dental-care-without-seeing-a-dentist/
-    image_path: /images/companies/pearlii.png
+    image_path: /images/companies/pearlii.webp
   - name: King
     url: https://king.com
-    image_path: /images/companies/king.png
+    image_path: /images/companies/king.svg
   - name: NaturalMotion
     url: https://www.naturalmotion.com
-    image_path: /images/companies/naturalmotion.png
+    image_path: /images/companies/naturalmotion.svg
   - name: Playfish
     url: https://en.wikipedia.org/wiki/Playfish
-    image_path: /images/companies/playfish.png
+    image_path: /images/companies/playfish.jpg
 ---
 
 # Dan Borthwick

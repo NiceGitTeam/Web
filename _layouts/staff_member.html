@@ -27,13 +27,7 @@ layout: default
 					</div>
 				</div>
 				
-				<div class="staff-content">
-					{{ content }}
-				</div>
-				
-				{% if page.logo_images %}
 				<div class="company-logos">
-					<h3>Companies worked with</h3>
 					<div class="logo-grid">
 						{% for logo in page.logo_images %}
 							<div class="logo-item">
@@ -44,7 +38,10 @@ layout: default
 						{% endfor %}
 					</div>
 				</div>
-				{% endif %}
+
+				<div class="staff-content">
+					{{ content }}
+				</div>				
 			</div>
 		</div>
 	</section>
@@ -122,14 +119,12 @@ layout: default
 	.logo-item img {
 		max-width: 100%;
 		height: auto;
-		filter: grayscale(100%);
-		opacity: 0.8;
 		transition: all 0.3s ease;
 	}
 	
 	.logo-item:hover img {
-		filter: grayscale(0);
-		opacity: 1;
+		filter: grayscale(100%);
+		opacity: 0.8;
 	}
 	
 	@media (max-width: 768px) {

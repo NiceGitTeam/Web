@@ -12,7 +12,7 @@ logo_images:
     image_path: /images/companies/startup-nerds.png
   - name: Mindset Health
     url: https://mindsethealth.com
-    image_path: /images/companies/mindset-health.png
+    image_path: /images/companies/mindset-health.svg
 ---
 
 # Ashley Law-Smith
