@@ -6,6 +6,13 @@ linkedin: ashleylawsmith
 twitter:
 blurb: Financial leadership with 20 years experience helping startups succeed
 priority: 2
+logo_images:
+  - name: The Startup Nerds
+    url: https://www.thestartupnerds.com
+    image_path: /images/companies/startup-nerds.png
+  - name: Mindset Health
+    url: https://mindsethealth.com
+    image_path: /images/companies/mindset-health.png
 ---
 
 # Ashley Law-Smith

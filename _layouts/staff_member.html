@@ -30,6 +30,21 @@ layout: default
 				<div class="staff-content">
 					{{ content }}
 				</div>
+				
+				{% if page.logo_images %}
+				<div class="company-logos">
+					<h3>Companies worked with</h3>
+					<div class="logo-grid">
+						{% for logo in page.logo_images %}
+							<div class="logo-item">
+								<a href="{{ logo.url }}" target="_blank" rel="noopener">
+									<img src="{% include relative-src.html src=logo.image_path %}" alt="{{ logo.name }}" title="{{ logo.name }}">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				{% endif %}
 			</div>
 		</div>
 	</section>
@@ -85,6 +100,38 @@ layout: default
 		display: none; /* Hide the H1 from the markdown as we're using the page.name as the title */
 	}
 	
+	.company-logos {
+		margin-top: 50px;
+	}
+	
+	.company-logos h3 {
+		margin-bottom: 20px;
+	}
+	
+	.logo-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px;
+		align-items: center;
+	}
+	
+	.logo-item {
+		flex: 0 0 120px;
+	}
+	
+	.logo-item img {
+		max-width: 100%;
+		height: auto;
+		filter: grayscale(100%);
+		opacity: 0.8;
+		transition: all 0.3s ease;
+	}
+	
+	.logo-item:hover img {
+		filter: grayscale(0);
+		opacity: 1;
+	}
+	
 	@media (max-width: 768px) {
 		.profile-header {
 			flex-direction: column;
@@ -93,6 +140,14 @@ layout: default
 		
 		.staff-image {
 			margin: 0 auto 20px;
+		}
+		
+		.logo-grid {
+			gap: 15px;
+		}
+		
+		.logo-item {
+			flex: 0 0 100px;
 		}
 	}
 </style>

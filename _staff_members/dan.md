@@ -6,6 +6,22 @@ linkedin: danborthwick
 twitter:
 blurb: Dan Borthwick is NiceGit's founder and CEO. 
 priority: 1
+logo_images:
+  - name: Mindset Health
+    url: https://mindsethealth.com
+    image_path: /images/companies/mindset-health.png
+  - name: Pearlii
+    url: https://www.forbes.com.au/news/innovation/how-to-fill-holes-in-dental-care-without-seeing-a-dentist/
+    image_path: /images/companies/pearlii.png
+  - name: King
+    url: https://king.com
+    image_path: /images/companies/king.png
+  - name: NaturalMotion
+    url: https://www.naturalmotion.com
+    image_path: /images/companies/naturalmotion.png
+  - name: Playfish
+    url: https://en.wikipedia.org/wiki/Playfish
+    image_path: /images/companies/playfish.png
 ---
 
 # Dan Borthwick
