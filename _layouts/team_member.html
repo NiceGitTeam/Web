@@ -2,14 +2,14 @@
 layout: default
 ---
 <div class="content">
-	<section class="staff-member-page">
+	<section class="team-member-page">
 		<div class="container">
-			<div class="staff-member-profile">
+			<div class="team-member-profile">
 				<div class="profile-header">
-					<div class="staff-image">
+					<div class="team-image">
 						<img src="{% include relative-src.html src=page.image_path %}" alt="{{ page.name }}">
 					</div>
-					<div class="staff-details">
+					<div class="team-details">
 						<h2>{{ page.name }}</h2>
 						<p class="position">{{ page.position }}</p>
 						<div class="social-links">
@@ -39,7 +39,7 @@ layout: default
 					</div>
 				</div>
 
-				<div class="staff-content">
+				<div class="team-content">
 					{{ content }}
 				</div>				
 			</div>
@@ -48,7 +48,7 @@ layout: default
 </div>
 
 <style>
-	.staff-member-page {
+	.team-member-page {
 		padding: 60px 0;
 	}
 	
@@ -57,27 +57,27 @@ layout: default
 		margin-bottom: 40px;
 	}
 	
-	.staff-image {
+	.team-image {
 		flex: 0 0 200px;
 		margin-right: 40px;
 	}
 	
-	.staff-image img {
+	.team-image img {
 		width: 100%;
 		border-radius: 50%;
 		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 	}
 	
-	.staff-details {
+	.team-details {
 		flex: 1;
 	}
 	
-	.staff-details h2 {
+	.team-details h2 {
 		margin-top: 0;
 		margin-bottom: 10px;
 	}
 	
-	.staff-details .position {
+	.team-details .position {
 		font-size: 1.2em;
 		color: #666;
 		margin-bottom: 20px;
@@ -89,11 +89,11 @@ layout: default
 		text-decoration: none;
 	}
 	
-	.staff-content {
+	.team-content {
 		line-height: 1.6;
 	}
 	
-	.staff-content h1 {
+	.team-content h1 {
 		display: none; /* Hide the H1 from the markdown as we're using the page.name as the title */
 	}
 	
@@ -133,7 +133,7 @@ layout: default
 			text-align: center;
 		}
 		
-		.staff-image {
+		.team-image {
 			margin: 0 auto 20px;
 		}
 		

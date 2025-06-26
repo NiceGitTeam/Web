@@ -2,14 +2,14 @@
 title: Our team
 description: We're building an amazing team of developers, designers, product managers and sales people.
 ---
-<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
-<ul class="staff">
-	{% assign sorted_staff = site.staff_members | sort: 'priority' %}
-	{% for person in sorted_staff %}
+<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_team/" class="btn"><strong>&#9998;</strong> Manage Team members</a></p>
+<ul class="team">
+	{% assign sorted_team = site.team | sort: 'priority' %}
+	{% for person in sorted_team %}
 		<li>
 			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
 			<!-- <div class="name"><a target="_blank" href="https://www.linkedin.com/in/{{ person.linkedin }}">{{ person.name }}</a></div> -->
-			<div class="name"><a target="_blank" href="/staff_members/{{ person.slug }}">{{ person.name }}</a></div>
+			<div class="name"><a target="_blank" href="/team/{{ person.slug }}">{{ person.name }}</a></div>
 			<div class="position">{{ person.position }}</div>
 			
 			{% if person.logo_images %}
@@ -20,7 +20,7 @@ description: We're building an amazing team of developers, designers, product ma
 					</a>
 				{% endfor %}
 				{% if person.logo_images.size > 3 %}
-					<a href="/staff_members/{{ person.slug }}" class="more-logos">+{{ person.logo_images.size | minus: 3 }}</a>
+					<a href="/team/{{ person.slug }}" class="more-logos">+{{ person.logo_images.size | minus: 3 }}</a>
 				{% endif %}
 			</div>
 			{% endif %}
@@ -29,6 +29,34 @@ description: We're building an amazing team of developers, designers, product ma
 </ul>
 
 <style>
+	.team {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.team li {
+		padding: 30px 20px;
+		box-sizing: border-box;
+		width: 100%;
+		text-align: center;
+	}
+	
+	@media (min-width: 768px) {
+		.team li {
+			width: 50%;
+		}
+	}
+	
+	@media (min-width: 992px) {
+		.team li {
+			width: 30%;
+		}
+	}
+	
 	.company-logos {
 		display: flex;
 		gap: 10px;

@@ -1,4 +1,4 @@
-.staff {
+.team {
 	padding: 0;
 	list-style: none;
 	@extend %flexbox;
@@ -16,7 +16,6 @@
 		@media #{$desktop} {
 			@include flex(1, 1, 29%);
 		}
-
 	}
 
 	.square-image {
