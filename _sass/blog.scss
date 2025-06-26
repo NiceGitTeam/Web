@@ -26,6 +26,18 @@
 		.blurb {
 			text-align: center;
 		}
+		
+		.author-link {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			text-align: center;
+			transition: opacity 0.2s ease;
+			
+			&:hover {
+				opacity: 0.8;
+			}
+		}		
 	}
 
 	h3 {
