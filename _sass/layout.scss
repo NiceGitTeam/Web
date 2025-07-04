@@ -1,15 +1,80 @@
+// General body and HTML styles
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $body-font;
+	font-size: 16px; // Base font size
+	line-height: 1.6;
+	color: $text-color;
+	background-color: $secondary-color; // Use the light gray for background
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+// Links
+a {
+	color: $link-color;
+	text-decoration: none;
+	transition: color 0.3s ease, background-color 0.3s ease;
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: underline;
+	}
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	color: darken($text-color, 10%); // Slightly darker for emphasis
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
+	line-height: 1.3;
+	font-weight: 600; // Poppins regular is 400, semi-bold 600, bold 700
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.0em; }
+
+// Paragraphs
+p {
+	font-family: $body-font;
+	font-size: 1em; // Standard paragraph size, relative to body's 16px
+	line-height: 1.7; // Slightly more line height for readability
+	color: $text-color;
+	margin-bottom: 1.25em; // Standard bottom margin
+}
+
+
+// Container styles (existing, slightly adjusted for global context)
 .container, .text-container {
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
-	padding: 0 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
 }
 
 .text-container {
-	max-width: 750px;
+	max-width: 750px; // Good for readability
 }
 
 .container {
-	max-width: 1140px;
+	max-width: 1140px; // Common max-width
 
 	&.max-container {
 		max-width: 100%;
@@ -17,160 +82,228 @@
 	}
 }
 
+// Header styles (modified for new design)
 header {
-	color: #fff;
-	padding: 20px 0;
-	background: $brand-color; /* Old browsers */
-	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
+	color: $header-text-color;
+	padding: 15px 0; // Adjusted padding
+	background: $header-bg-color; // Solid color from variables
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05); // Softer shadow
+
+	.container { // Ensure flex properties for alignment
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
 	a {
-		color: #fff;
+		color: $header-text-color;
 		text-decoration: none;
-		z-index: 1;
+		z-index: 1; // Keep this if necessary for stacking context
 		position: relative;
 
 		&:hover {
-			text-decoration: none;
+			color: darken($header-text-color, 10%);
+			text-decoration: none; // No underline for header links
 		}
 	}
 
 	.company-name {
-		font-size: 1.7em;
-		height: 33px;
-		top: 13px;
+		font-family: $heading-font; // Use heading font for logo text
+		font-size: 1.9em; // Slightly larger
+		font-weight: 700; // Bold Poppins
+		// height: auto; // Remove fixed height
+		// top: auto; // Remove fixed top positioning
+		display: flex; // For vertical alignment if logo image is used
+		align-items: center;
 
 		a {
 			display: inline-block;
 			vertical-align: middle;
+			&:hover {
+				color: $header-text-color; // Keep logo text color consistent
+			}
 		}
 
-		img {
+		img { // If an image logo is used
 			display: block;
 			width: auto;
+			max-height: 40px; // Control logo image height
 		}
 	}
+	// Navigation styles will be primarily in _navigation.scss
 }
 
+// Main content area
 .content {
-	background: #fff;
-	padding: 1px 0 0 0;
+	background: $secondary-color; // Main background for content area
+	padding: 20px 0; // Adjusted padding
 	position: relative;
+	flex: 1 0 auto; // For sticky footer
 }
 
 .screenshot{
 	max-width: 100%;
 	height: auto;
 	display: block;
-	//box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
-	border-radius: 20px;
+	border-radius: 8px; // Softer border radius
 	margin-left: auto;
 	margin-right: auto;
-	//background: #DDD url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat;
-	// padding: 20px 0 0 0;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1); // Modern shadow
 	position: relative;
 }
 
 section {
-	padding: 100px 0;
+	padding: 60px 0; // Adjusted padding
+
+	&:nth-child(even) { // Add subtle background for alternating sections if desired
+		// background-color: darken($secondary-color, 2%);
+	}
 }
 
 section + section {
-	padding-top: 0;
+	padding-top: 0; // Keep this for stacked sections
 }
 
 .subtext {
-	margin-top: 10px;
+	margin-top: 15px; // Increased margin
 	text-align: center;
+	color: lighten($text-color, 20%); // Softer subtext
+	font-size: 0.9em;
 }
 
 
-.cta {
+.cta { // Call to action section
 	margin: 60px 0;
+	text-align: center; // Center CTA content
 }
 
-.page h2 {
+.page h2 { // Specific styling for h2 within a .page context
 	text-align: center;
 }
 
 blockquote {
-	padding: 18px 25px;
-	margin: 0;
+	padding: 20px 30px;
+	margin: 20px 0;
 	quotes: "\201C""\201D""\2018""\2019";
 	font-style: italic;
+	background-color: darken($secondary-color, 3%); // Subtle background for blockquote
+	border-left: 4px solid $primary-color; // Accent border
+	border-radius: 4px;
 
 	.author {
 		display: block;
 		font-weight: bold;
 		margin: 10px 0 0 0;
-		font-size: .85em;
+		font-size: .9em;
 		font-style: normal;
+		color: $text-color;
 	}
 
 	p {
 		display: inline;
+		color: lighten($text-color, 10%);
 	}
 }
 
 blockquote:before {
-	color: #ccc;
+	color: $primary-color; // Use primary color for quote mark
 	content: open-quote;
-	font-size: 4em;
+	font-size: 3em; // Slightly smaller
 	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
+	margin-right: 0.2em; // Adjusted margin
+	vertical-align: -0.35em; // Adjusted alignment
 }
 
-.square-image {
+.square-image { // For team member images or similar
 	width: 150px;
 	height: 150px;
 	overflow: hidden;
-	margin: 25px auto 0 auto;
+	margin: 25px auto; // Keep auto margins for centering
 	position: relative;
-	border-radius: 200px;
+	border-radius: 50%; // Circular images are modern
 
 	img {
 		position: absolute;
-		left: -1000%;
-		right: -1000%;
-		top: -1000%;
-		bottom: -1000%;
-		margin: auto;
-		width: 120px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100%;
+		width: auto; // Allow image to scale
+		height: auto; // Allow image to scale
+		object-fit: cover; // Ensure image covers the area
 	}
 }
 
 .page {
 	margin-bottom: 0;
-	padding-bottom: 80px;
+	padding-bottom: 80px; // Keep padding for page content
 }
 
 .center-text {
 	text-align: center;
 }
 
-.editor-link {
- 	display: none;
+
+// General button styling (add if not already in elements.scss or similar)
+.button, button, input[type="submit"], input[type="button"] {
+	background-color: $primary-color;
+	border: none;
+	border-radius: 5px;
+	color: white !important; // Ensure text is white, important to override other link styles
+	padding: 12px 28px;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: $heading-font;
+	font-weight: 600;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	display: inline-block;
+	text-align: center;
+
+	&:hover, &:focus {
+		background-color: darken($primary-color, 8%);
+		color: white !important;
+		text-decoration: none;
+		transform: translateY(-2px); // Subtle lift
+	}
+	&:active {
+		transform: translateY(0px);
+	}
+}
+
+.button-secondary {
+	background-color: $accent-color;
+	&:hover, &:focus {
+		background-color: darken($accent-color, 8%);
+	}
+}
+
+
+.editor-link { // Keep CloudCannon styles, but ensure they are not overridden by new button styles
+	display: none; // This seems to be default, CloudCannon probably enables it
 	margin-top: 0;
-	.btn {
-		border: 0;
-		border-radius: 2px;
-		width: 100%;
+	&.btn { // More specific selector for CC buttons
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		width: auto; // Don't make it full width unless intended
 		max-width: 500px;
 		box-sizing: border-box;
-		font-size: 2rem;
+		font-size: 14px; // Smaller font size for admin buttons
 		text-decoration: none;
-		padding: 10px 15px;
+		padding: 8px 12px;
 		margin: 0;
-		font-size: 18px;
 		cursor: pointer;
-		background-color: #f7e064;
-		color: #333;
-		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+		background-color: #f0f0f0; // Neutral background
+		color: #333 !important; // Ensure text color for CC button
+		box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+		font-family: sans-serif; // Use a standard UI font
+		font-weight: normal;
+		transition: background-color 0.2s ease;
 
 		&:hover {
-			background-color: #f4d525;
-			color: #333;
+			background-color: #e0e0e0;
+			color: #333 !important;
+			transform: none; // No transform for CC buttons
 		}
 	}
-
 }

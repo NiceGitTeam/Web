@@ -1,6 +1,21 @@
-$brand-color: #4182e4;
-$secondary-brand-color: #4182e4;
-$middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+// Design Option 1: Fresh & Vibrant
+$primary-color: #18BC9C; // Vibrant Teal
+$secondary-color: #F7F9F9; // Light Cool Gray
+$accent-color: #3498DB; // Friendly Blue
+$text-color: #2C3E50; // Dark Slate Blue
+$header-bg-color: $primary-color;
+$header-text-color: #FFFFFF;
+$link-color: $accent-color;
+$link-hover-color: darken($accent-color, 10%);
+
+// Existing variables (renaming for clarity or replacing if directly superseded)
+$brand-color: $primary-color; // Keep for compatibility if other files use it directly
+$secondary-brand-color: $accent-color; // Or another relevant color from the new palette
+$middle-gradient-color: mix($primary-color, $accent-color, 95%); // Example, might not be used
+
+// Typography
+$heading-font: 'Poppins', sans-serif;
+$body-font: 'Lato', sans-serif;
 
 // Breakpoints
 $tablet: "(min-width: 450px)";

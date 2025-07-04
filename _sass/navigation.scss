@@ -1,86 +1,234 @@
-.nav-open nav {
-	border-bottom: 1px dotted rgba(255, 255, 255, .2);
-	padding: 10px 0;
-	a {
-		display: block;
+// Main navigation container
+nav {
+	font-family: $heading-font; // Use heading font for nav
+	text-transform: none; // No text-transform, or capitalize if preferred
+	font-size: 1em;    // Slightly larger base font size for nav
+	width: auto;       // Let it size based on content within flex container
+	display: flex;     // Use flex for alignment with potential items like search/buttons
+	align-items: center;
+
+	// Desktop navigation styling
+	@media #{$mid-point} { // Use existing $mid-point or $desktop
+		// position: absolute; // Removed - header container is now flex
+		// top: 13px;
+		// right: 0;
+		// padding: 0 20px; // Handled by header container
 	}
 
-	@media #{$mid-point} {
-		border: 0;
-		padding: 0 20px;
+	// General link styling in nav
+	a, .dropdown-button {
+		color: $header-text-color;
+		text-decoration: none;
+		padding: 10px 15px; // Consistent padding
+		margin: 0 5px; // Spacing between nav items
+		border-bottom: 2px solid transparent; // For hover effect
+		transition: color 0.3s ease, border-bottom-color 0.3s ease;
+		display: none; // Hidden by default, shown in .nav-open or desktop
+		font-weight: 600; // Poppins semi-bold
 
-		a {
-			display: inline;
+		@media #{$mid-point} {
+			display: inline-block; // Show links on desktop
+		}
+
+		&:hover, &.active {
+			color: darken($header-text-color, 15%);
+			border-bottom-color: darken($header-text-color, 15%);
+		}
+		&.active {
+			// Optional: slightly stronger visual cue for active link
+			// color: darken($header-text-color, 20%);
+			// border-bottom-color: darken($header-text-color, 20%);
+		}
+	}
+
+	// Hamburger menu toggle
+	.nav-toggle {
+		display: inline-block; // Show on mobile
+		position: static; // No longer absolute
+		font-size: 1.5em; // Adjust size
+		color: $header-text-color;
+		border: none;
+		background: none;
+		padding: 5px 10px;
+		cursor: pointer;
+
+		@media #{$mid-point} {
+			display: none; // Hide on desktop
+		}
+		&:hover {
+			color: darken($header-text-color, 15%);
+			border-bottom-color: transparent; // No border for hamburger
+		}
+	}
+
+	// Highlighted link (e.g., Sign Up button)
+	a.highlight {
+		background-color: lighten($header-bg-color, 15%); // A slightly lighter shade of header bg or a contrasting color
+		color: $header-text-color; // Ensure text color contrasts with new bg
+		border-radius: 5px;
+		padding: 10px 20px;
+		border-bottom: none; // Remove border for highlighted links
+
+		&:hover {
+			background-color: lighten($header-bg-color, 20%);
+			color: $header-text-color;
+			border-bottom: none;
 		}
 	}
 }
 
-nav {
-	text-transform: uppercase;
-	font-size: .8em;
-	width: 100%;
+// Mobile navigation - when .nav-open is on body
+.nav-open {
+	overflow-y: auto; // Prevent page scroll when mobile nav is open
 
-	@media #{$mid-point} {
-		text-align: right;
+	header .container { // Adjust header container for mobile nav
+		flex-direction: column;
+		align-items: flex-start; // Align items to the start
+	}
+
+	nav {
+		width: 100%; // Full width for mobile nav
+		margin-top: 15px; // Space below company name/toggle
+		background-color: darken($header-bg-color, 5%); // Slightly darker background for mobile nav dropdown area
+		padding: 10px 0; // Padding for the nav area
+		box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+
+
+		a, .dropdown-button {
+			display: block; // Stack links vertically
+			width: 100%;    // Full width links
+			padding: 12px 20px; // Padding for mobile links
+			margin: 0;      // No horizontal margin
+			border-bottom: 1px solid lighten($header-bg-color, 5%); // Separator for links
+			color: $header-text-color;
+
+			&:hover, &.active {
+				background-color: lighten($header-bg-color, 5%);
+				color: darken($header-text-color, 10%);
+				border-bottom-color: lighten($header-bg-color, 5%); // Keep separator color consistent on hover
+			}
+		}
+		a.highlight { // Ensure highlight button is distinct in mobile nav too
+			background-color: lighten($header-bg-color, 20%);
+			margin-top: 10px; // Add some space before a prominent CTA
+			&:hover {
+				background-color: lighten($header-bg-color, 25%);
+			}
+		}
+	}
+}
+
+
+// Dropdown specific styles
+.dropdown {
+	position: relative; // Already set in default.html, but good to have context
+	display: inline-block; // For desktop
+
+	.nav-open & { // When mobile nav is open
+		display: block; // Make dropdown take full width
+	}
+
+	.dropdown-button {
+		cursor: pointer;
+		// display: inline-block; // Covered by general nav a styling
+		i { // Chevron icon
+			margin-left: 6px;
+			font-size: 0.8em;
+			transition: transform 0.2s ease-in-out;
+		}
+	}
+
+	// Rotate chevron when dropdown is open (requires JS to add a class like .dropdown-open to .dropdown)
+	// &.dropdown-open .dropdown-button i {
+	// transform: rotate(180deg);
+	// }
+	// Alternatively, if JS toggles .dropdown-content directly, this can be harder to target purely with CSS.
+	// For hover-open on desktop, this is not applicable for the chevron rotation.
+
+	.dropdown-content {
+		// display: none; // Handled by inline style in default.html initially and JS
 		position: absolute;
-		top: 13px;
-		right: 0;
-		padding: 0 20px;
-	}
+		background-color: $secondary-color; // Light background for dropdown
+		min-width: 200px; // Wider dropdown
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15); // Softer shadow
+		z-index: 1000; // Ensure it's on top
+		border-radius: 5px; // Rounded corners
+		margin-top: 5px; // Space from button
+		left: 0;
+		padding: 5px 0; // Padding inside dropdown container
+		opacity: 0; // Start hidden for animation
+		visibility: hidden; // Start hidden
+		transform: translateY(10px); // Start slightly lower for animation
+		transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 
-
-	a {
-		margin: 0 3px;
-		padding: 20px 10px;
-		border-bottom: 1px solid rgba(255,255,255,0);
-		color: rgba(255,255,255,.8);
-		transition: .2s ease-in-out;
-		display: none;
-
-		@media #{$mid-point} {
-			display: inline;
-			padding: 10px;
+		// Desktop: Show on hover
+		@media (min-width: 701px) { // Matches default.html media query
+			.dropdown:hover & {
+				display: block; // Overrides JS display:none for hover
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
 		}
 
+		// Mobile: JS will toggle display: block/none
+		.nav-open & { // Styles for dropdown content in mobile view
+			position: static;
+			box-shadow: none;
+			background-color: transparent; // Inherit mobile nav bg
+			margin-left: 0; // No specific indent, handled by link padding
+			width: 100%;
+			padding: 0;
+			opacity: 1; // Always visible when parent is
+			visibility: visible;
+			transform: none; // No transform needed
+			border-top: 1px solid lighten($header-bg-color, 5%); // Separator
+		}
 
-		&.nav-toggle {
-			display: inline;
-			position: absolute;
-			right: 10px;
-			top: -22px;
-			font-size: 1.9em;
-			border: 0;
-
-			@media #{$mid-point} {
-				display: none;
-			}
+		a { // Links within the dropdown
+			font-family: $body-font; // Use body font for dropdown items
+			font-size: 0.95em;
+			font-weight: normal; // Normal weight for dropdown items
+			color: $text-color; // Standard text color
+			padding: 10px 20px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			border-bottom: none; // Remove main nav link bottom border
+			margin: 0; // Reset margin
+			transition: background-color 0.2s ease, color 0.2s ease;
 
 			&:hover {
-				border: 0;
+				background-color: darken($secondary-color, 5%); // Subtle hover for dropdown items
+				color: $primary-color; // Use primary color for hover text
+				border-bottom: none; // Ensure no border on hover
+			}
+
+			.nav-open & { // Dropdown links in mobile view
+				color: $header-text-color; // Match mobile nav link color
+				padding-left: 35px; // Indent sub-items
+				&:hover {
+					background-color: lighten($header-bg-color, 10%);
+					color: darken($header-text-color, 10%);
+				}
 			}
 		}
 	}
+}
 
-	a:hover {
-
-		border-bottom: 1px solid rgba(255,255,255,.3);
-		color: #fff;
+// Ensure CloudCannon editor link in nav is not overly styled if it exists there
+nav .editor-link.btn {
+	background-color: rgba(255,255,255,0.2);
+	color: white;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	border: 1px solid rgba(255,255,255,0.3);
+	text-transform: none;
+	font-weight: normal;
+	margin-left: 15px;
+	&:hover {
+		background-color: rgba(255,255,255,0.3);
+		color: white;
+		border-bottom: 1px solid rgba(255,255,255,0.3); // Keep original border style
 	}
-
-	@media #{$mid-point} {
-		a.highlight {
-			border: 1px #ccc solid;
-			border-radius: 5px;
-
-			&:hover {
-				background: #fff;
-				color: $brand-color;
-			}
-		}
-	}
-
-	a.active {
-		color: #fff;
-	}
-
 }
