@@ -1,21 +1,25 @@
-// Design Option 1: Fresh & Vibrant
-$primary-color: #18BC9C; // Vibrant Teal
-$secondary-color: #F7F9F9; // Light Cool Gray
-$accent-color: #3498DB; // Friendly Blue
-$text-color: #2C3E50; // Dark Slate Blue
-$header-bg-color: $primary-color;
-$header-text-color: #FFFFFF;
-$link-color: $accent-color;
+// Design Option 2: Sleek & Tech-Professional
+$primary-color: #2C3E50;    // Dark Slate Blue
+$secondary-color: #EAECEE;  // Very Light Gray (background)
+$accent-color: #1ABC9C;     // Vibrant Teal (CTAs, highlights)
+$text-color: #34495E;       // Dark Gray/Blue (body text)
+$border-color: #BDC3C7;     // Silver (borders, subtle UI)
+
+$header-bg-color: #FFFFFF; // White header for a clean look
+$header-text-color: $primary-color; // Dark text on white header
+$header-border-color: $secondary-color; // Subtle border for header
+
+$link-color: $accent-color; // Use accent for links initially
 $link-hover-color: darken($accent-color, 10%);
 
 // Existing variables (renaming for clarity or replacing if directly superseded)
-$brand-color: $primary-color; // Keep for compatibility if other files use it directly
-$secondary-brand-color: $accent-color; // Or another relevant color from the new palette
-$middle-gradient-color: mix($primary-color, $accent-color, 95%); // Example, might not be used
+$brand-color: $primary-color;
+$secondary-brand-color: $accent-color;
+$middle-gradient-color: mix($primary-color, $accent-color, 95%); // Might not be used
 
 // Typography
-$heading-font: 'Poppins', sans-serif;
-$body-font: 'Lato', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+$body-font: 'Inter', sans-serif;
 
 // Breakpoints
 $tablet: "(min-width: 450px)";

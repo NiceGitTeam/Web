@@ -1,6 +1,8 @@
 // General body and HTML styles
 html {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 *, *:before, *:after {
@@ -8,11 +10,11 @@ html {
 }
 
 body {
-	font-family: $body-font;
-	font-size: 16px; // Base font size
-	line-height: 1.6;
-	color: $text-color;
-	background-color: $secondary-color; // Use the light gray for background
+	font-family: $body-font; // Inter
+	font-size: 16px;
+	line-height: 1.65; // Slightly more spacious line height
+	color: $text-color; // Dark Gray/Blue
+	background-color: $secondary-color; // Very Light Gray
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -22,44 +24,44 @@ body {
 
 // Links
 a {
-	color: $link-color;
+	color: $link-color; // Accent color (Teal)
 	text-decoration: none;
-	transition: color 0.3s ease, background-color 0.3s ease;
+	font-weight: 500; // Inter medium for links
+	transition: color 0.2s ease, background-color 0.2s ease;
 
 	&:hover {
-		color: $link-hover-color;
-		text-decoration: underline;
+		color: $link-hover-color; // Darker Teal
+		text-decoration: none; // No underline by default, or add subtle one
 	}
 }
 
-// Headings
+// Headings - Roboto
 h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font;
-	color: darken($text-color, 10%); // Slightly darker for emphasis
-	margin-top: 1.5em;
-	margin-bottom: 0.75em;
-	line-height: 1.3;
-	font-weight: 600; // Poppins regular is 400, semi-bold 600, bold 700
+	font-family: $heading-font; // Roboto
+	color: $primary-color;    // Dark Slate Blue for headings
+	margin-top: 1.8em;
+	margin-bottom: 0.8em;
+	line-height: 1.35;
+	font-weight: 700; // Roboto Bold for main headings
 }
 
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.2em; }
-h3 { font-size: 1.8em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1.0em; }
+h1 { font-size: 2.6em; letter-spacing: -0.5px; } // Slightly more compact
+h2 { font-size: 2.1em; font-weight: 700; } // Roboto Bold
+h3 { font-size: 1.7em; font-weight: 500; } // Roboto Medium
+h4 { font-size: 1.4em; font-weight: 500; } // Roboto Medium
+h5 { font-size: 1.15em; font-weight: 500; } // Roboto Medium
+h6 { font-size: 1.0em; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;} // Uppercase for small subheadings
 
 // Paragraphs
 p {
-	font-family: $body-font;
-	font-size: 1em; // Standard paragraph size, relative to body's 16px
-	line-height: 1.7; // Slightly more line height for readability
+	font-family: $body-font; // Inter
+	font-size: 1em; // Relative to body's 16px
+	line-height: 1.7;
 	color: $text-color;
-	margin-bottom: 1.25em; // Standard bottom margin
+	margin-bottom: 1.5em;
 }
 
-
-// Container styles (existing, slightly adjusted for global context)
+// Container styles
 .container, .text-container {
 	margin-left: auto;
 	margin-right: auto;
@@ -70,11 +72,11 @@ p {
 }
 
 .text-container {
-	max-width: 750px; // Good for readability
+	max-width: 780px; // Slightly wider for tech content
 }
 
 .container {
-	max-width: 1140px; // Common max-width
+	max-width: 1200px; // Wider max-width for a more spacious feel
 
 	&.max-container {
 		max-width: 100%;
@@ -82,14 +84,17 @@ p {
 	}
 }
 
-// Header styles (modified for new design)
+// Header styles - Sleek & Tech-Professional
 header {
-	color: $header-text-color;
-	padding: 15px 0; // Adjusted padding
-	background: $header-bg-color; // Solid color from variables
-	box-shadow: 0 2px 4px rgba(0,0,0,0.05); // Softer shadow
+	color: $header-text-color; // Dark text
+	padding: 15px 0;           // Compact padding
+	background: $header-bg-color; // White background
+	border-bottom: 1px solid $header-border-color; // Subtle border
+	position: sticky; // Sticky header
+	top: 0;
+	z-index: 1020; // Ensure it's above other content
 
-	.container { // Ensure flex properties for alignment
+	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -97,130 +102,120 @@ header {
 
 	a {
 		color: $header-text-color;
-		text-decoration: none;
-		z-index: 1; // Keep this if necessary for stacking context
-		position: relative;
-
+		font-weight: 500; // Inter Medium for header links
 		&:hover {
-			color: darken($header-text-color, 10%);
-			text-decoration: none; // No underline for header links
+			color: $accent-color; // Hover to accent color
+			text-decoration: none;
 		}
 	}
 
 	.company-name {
-		font-family: $heading-font; // Use heading font for logo text
-		font-size: 1.9em; // Slightly larger
-		font-weight: 700; // Bold Poppins
-		// height: auto; // Remove fixed height
-		// top: auto; // Remove fixed top positioning
-		display: flex; // For vertical alignment if logo image is used
+		font-family: $heading-font; // Roboto for logo
+		font-size: 1.8em;
+		font-weight: 700;       // Roboto Bold
+		color: $primary-color; // Ensure it's the primary dark color
+		display: flex;
 		align-items: center;
 
 		a {
-			display: inline-block;
-			vertical-align: middle;
+			color: $primary-color; // Keep logo color consistent
 			&:hover {
-				color: $header-text-color; // Keep logo text color consistent
+				color: $primary-color; // No color change on logo hover
 			}
 		}
 
-		img { // If an image logo is used
+		img {
 			display: block;
 			width: auto;
-			max-height: 40px; // Control logo image height
+			max-height: 35px; // Control logo image height
 		}
 	}
-	// Navigation styles will be primarily in _navigation.scss
 }
 
 // Main content area
 .content {
-	background: $secondary-color; // Main background for content area
-	padding: 20px 0; // Adjusted padding
+	background: $secondary-color;
+	padding: 30px 0;
 	position: relative;
-	flex: 1 0 auto; // For sticky footer
+	flex: 1 0 auto;
 }
 
 .screenshot{
 	max-width: 100%;
 	height: auto;
 	display: block;
-	border-radius: 8px; // Softer border radius
+	border-radius: 6px; // Sharper radius
 	margin-left: auto;
 	margin-right: auto;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.1); // Modern shadow
+	box-shadow: 0 6px 20px rgba(44, 62, 80, 0.12); // More defined shadow using primary color base
 	position: relative;
 }
 
 section {
-	padding: 60px 0; // Adjusted padding
+	padding: 70px 0;
 
-	&:nth-child(even) { // Add subtle background for alternating sections if desired
-		// background-color: darken($secondary-color, 2%);
+	&:nth-child(even) {
+		 background-color: #FFFFFF; // Alternate sections with pure white for contrast
 	}
 }
 
 section + section {
-	padding-top: 0; // Keep this for stacked sections
+	padding-top: 0;
 }
 
 .subtext {
-	margin-top: 15px; // Increased margin
+	margin-top: 15px;
 	text-align: center;
-	color: lighten($text-color, 20%); // Softer subtext
-	font-size: 0.9em;
+	color: lighten($text-color, 15%);
+	font-size: 0.95em;
 }
 
-
-.cta { // Call to action section
-	margin: 60px 0;
-	text-align: center; // Center CTA content
+.cta {
+	margin: 70px 0;
+	text-align: center;
 }
 
-.page h2 { // Specific styling for h2 within a .page context
+.page h2 {
 	text-align: center;
 }
 
 blockquote {
-	padding: 20px 30px;
-	margin: 20px 0;
-	quotes: "\201C""\201D""\2018""\2019";
-	font-style: italic;
-	background-color: darken($secondary-color, 3%); // Subtle background for blockquote
-	border-left: 4px solid $primary-color; // Accent border
+	padding: 25px 35px;
+	margin: 25px 0;
+	font-style: normal; // Not italic for a more professional quote
+	background-color: #FFFFFF; // White background for quote
+	border-left: 5px solid $accent-color; // Accent border
 	border-radius: 4px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 
 	.author {
 		display: block;
-		font-weight: bold;
-		margin: 10px 0 0 0;
+		font-weight: 500; // Inter Medium
+		margin: 15px 0 0 0;
 		font-size: .9em;
-		font-style: normal;
-		color: $text-color;
+		color: $primary-color; // Darker author text
 	}
 
 	p {
-		display: inline;
-		color: lighten($text-color, 10%);
+		display: block; // Block for better structure
+		color: $text-color;
+		font-size: 1.05em; // Slightly larger quote text
+		line-height: 1.6;
 	}
 }
 
-blockquote:before {
-	color: $primary-color; // Use primary color for quote mark
-	content: open-quote;
-	font-size: 3em; // Slightly smaller
-	line-height: 0.1em;
-	margin-right: 0.2em; // Adjusted margin
-	vertical-align: -0.35em; // Adjusted alignment
+blockquote:before { // Remove pseudo-element quote for cleaner look, or style subtly
+	display: none;
 }
 
-.square-image { // For team member images or similar
-	width: 150px;
-	height: 150px;
+.square-image {
+	width: 120px; // Smaller for a sleeker team section
+	height: 120px;
 	overflow: hidden;
-	margin: 25px auto; // Keep auto margins for centering
+	margin: 20px auto;
 	position: relative;
-	border-radius: 50%; // Circular images are modern
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px $header-bg-color, 0 0 0 5px $border-color; // Frame effect
 
 	img {
 		position: absolute;
@@ -229,81 +224,88 @@ blockquote:before {
 		transform: translate(-50%, -50%);
 		min-width: 100%;
 		min-height: 100%;
-		width: auto; // Allow image to scale
-		height: auto; // Allow image to scale
-		object-fit: cover; // Ensure image covers the area
+		width: auto;
+		height: auto;
+		object-fit: cover;
 	}
 }
 
 .page {
 	margin-bottom: 0;
-	padding-bottom: 80px; // Keep padding for page content
+	padding-bottom: 80px;
 }
 
 .center-text {
 	text-align: center;
 }
 
-
-// General button styling (add if not already in elements.scss or similar)
+// Button styling - Sleek & Tech-Professional
 .button, button, input[type="submit"], input[type="button"] {
-	background-color: $primary-color;
-	border: none;
-	border-radius: 5px;
-	color: white !important; // Ensure text is white, important to override other link styles
-	padding: 12px 28px;
+	background-color: $accent-color; // Teal accent for buttons
+	border: 1px solid $accent-color; // Border same as bg
+	border-radius: 4px; // Sharper radius
+	color: white !important;
+	padding: 10px 25px; // Slightly more padding horizontally
 	text-decoration: none;
 	cursor: pointer;
-	font-family: $heading-font;
-	font-weight: 600;
-	transition: background-color 0.3s ease, transform 0.2s ease;
+	font-family: $heading-font; // Roboto for buttons
+	font-weight: 500; // Roboto Medium
+	font-size: 0.95em; // Slightly smaller button text
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
 	display: inline-block;
 	text-align: center;
+	letter-spacing: 0.3px;
 
 	&:hover, &:focus {
-		background-color: darken($primary-color, 8%);
+		background-color: darken($accent-color, 7%);
+		border-color: darken($accent-color, 7%);
 		color: white !important;
 		text-decoration: none;
-		transform: translateY(-2px); // Subtle lift
+		transform: translateY(-1px);
 	}
 	&:active {
 		transform: translateY(0px);
+		background-color: darken($accent-color, 10%);
+		border-color: darken($accent-color, 10%);
 	}
 }
 
-.button-secondary {
-	background-color: $accent-color;
+.button-secondary { // Example: Outline button or different color
+	background-color: transparent;
+	border: 1px solid $primary-color; // Dark border
+	color: $primary-color !important; // Dark text
 	&:hover, &:focus {
-		background-color: darken($accent-color, 8%);
+		background-color: $primary-color;
+		border-color: $primary-color;
+		color: white !important;
 	}
 }
 
-
-.editor-link { // Keep CloudCannon styles, but ensure they are not overridden by new button styles
-	display: none; // This seems to be default, CloudCannon probably enables it
+.editor-link.btn {
+	display: none;
 	margin-top: 0;
-	&.btn { // More specific selector for CC buttons
-		border: 1px solid #ccc;
+	&.btn {
+		border: 1px solid $border-color;
 		border-radius: 4px;
-		width: auto; // Don't make it full width unless intended
+		width: auto;
 		max-width: 500px;
 		box-sizing: border-box;
-		font-size: 14px; // Smaller font size for admin buttons
+		font-size: 13px;
 		text-decoration: none;
-		padding: 8px 12px;
+		padding: 6px 10px;
 		margin: 0;
 		cursor: pointer;
-		background-color: #f0f0f0; // Neutral background
-		color: #333 !important; // Ensure text color for CC button
-		box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
-		font-family: sans-serif; // Use a standard UI font
-		font-weight: normal;
+		background-color: #f0f0f0;
+		color: #333 !important;
+		box-shadow: none; // Flatter look for admin buttons
+		font-family: $body-font; // Inter for CC buttons
+		font-weight: 500;
 		transition: background-color 0.2s ease;
 
 		&:hover {
-			background-color: #e0e0e0;
+			background-color: #e5e5e5;
 			color: #333 !important;
-			transform: none; // No transform for CC buttons
+			transform: none;
 		}
 	}
 }
