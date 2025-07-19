@@ -7,5 +7,8 @@
         "latex",
         "plaintext",
         "html"
-    ]
+    ],
+    "cSpell.enabledFileTypes": {
+        "markdown": true
+    }
 }
