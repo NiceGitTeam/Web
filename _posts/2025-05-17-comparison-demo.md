@@ -12,9 +12,7 @@ We've been talking about how NiceGit simplifies collaboration for creative teams
 
 ## Watch the Demo
 
-<div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/c7KtS92Qbb4?si=i_EWC6OyOHj573PY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="c7KtS92Qbb4" %}
 
 In this demonstration, you'll see:
 
