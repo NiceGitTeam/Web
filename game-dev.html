@@ -43,6 +43,18 @@ layout: default
 		</div>
 	</section>
 	
+	<section class="testimonial">
+		<div class="container">
+			<div class="testimonial-block">
+				<div class="square-image"><img src="/images/testimonial.png" alt="Testimonial" class="editable"></div>
+				<blockquote>
+					<p class="editable">We spent hours every week resolving merge conflicts and dealing with broken builds. NiceGit has cut that time drastically while letting our artists manage their own assets without coming through engineering.</p>
+					<p class="editable author">Mike Johnson - Lead Developer at IndieFusion Games</p>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
 	<section>
 		<div class="container flex">
 			<div class="text editable">
@@ -56,25 +68,12 @@ layout: default
 				</ul>
 			</div>
 			<div class="image">
-				<img src="/images/Git-Compatible.png" alt="Git compatibility" class="screenshot editable" />
+				<img src="/images/OpenGitHub.gif" alt="Git compatibility" class="screenshot editable" />
 			</div>
 		</div>
 	</section>
 
-	<section class="testimonial">
-		<div class="container">
-			<div class="testimonial-block">
-				<div class="square-image"><img src="/images/testimonial.jpg" alt="Testimonial" class="editable"></div>
-				<blockquote>
-					<p class="editable">We spent hours every week resolving merge conflicts and dealing with broken builds. NiceGit has cut that time drastically while letting our artists manage their own assets without coming through engineering.</p>
-					<p class="editable author">Mike Johnson - Lead Developer at IndieFusion Games</p>
-				</blockquote>
-			</div>
-		</div>
-	</section>
-
-	<section class="bottom-cta">
-		<h2 class="editable">Ready to level up your team's collaboration?</h2>
-		<div class="button alt"><a href="/#sign-up">Join the Beta</a></div>
+	<section class="bottom-cta" id="sign-up">
+		{% include signup.html %}
 	</section>
 </div>
