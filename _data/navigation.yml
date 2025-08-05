@@ -1,38 +1,33 @@
 # - name: Pricing
 #   link: /pricing/
-#   new_window: false
-#   highlight: false
+#   
+#   
+- name: Features
+  link: /features/
+
 - name: NiceGit for...
   link: /#
-  new_window: false
-  highlight: false
+  
   subnav:
     - name: Team Leads
       link: /leads/
-      new_window: false
-      highlight: false
     - name: Game Developers
       link: /game-dev/
-      new_window: false
-      highlight: false
+
 - name: Blog
   link: /blog/
-  new_window: false
-  highlight: false
-  
+
 # - name: About
 #   link: /about/
-#   new_window: false
-#   highlight: false
+#   
 - name: Contact
-  link: /contact/
-  new_window: false
-  highlight: false
+  link: /contact/  
+  
 - name: Sign Up
   link: /#sign-up
-  new_window: false
   highlight: true
+  
 # - name: Purchase
 #   link: /#purchase
-#   new_window: false
+#   
 #   highlight: true
