@@ -3,6 +3,22 @@ title: Features
 heading: Features
 description: The key features that make NiceGit so, well, nice!
 ---
+**The Problem**
+
+Source control is powerful, but for most teams it’s painful.
+
+Traditional Git tools are packed with commands, jargon, and complexity that slow people down. On the other hand, cloud drives like Dropbox or Google Drive are simple, but they’re unreliable leaving teams exposed to duplication, overwrites, and lost work.
+
+The result? Wasted hours, frustrating merge conflicts, and projects that feel harder to manage than they should.
+
+**Why NiceGit**
+
+NiceGit brings the best of both worlds: the reliability of Git with the simplicity of a one-button workflow.
+
+It’s designed for teams who want to focus on their work, not on wrangling their tools.
+And because NiceGit works with all the major hosting providers — GitHub, GitLab, and Bitbucket — your team doesn’t have to change where your projects live. You simply make them easier to manage, without giving up the integrations you already rely on.
+
+**Features**
 
 ## One-Button Sync
 
