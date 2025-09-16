@@ -2,8 +2,8 @@
 #   link: /pricing/
 #   
 #   
-# - name: Features
-#   link: /features/
+- name: Features
+  link: /features/
 
 - name: NiceGit for...
   link: /#
