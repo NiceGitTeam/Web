@@ -5,6 +5,9 @@
 - name: Features
   link: /features/
 
+- name: Tech FAQs
+  link: /tech-faqs/
+
 - name: NiceGit for...
   link: /#
   
