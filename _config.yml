@@ -9,7 +9,7 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Product marketing template for Jekyll.
+description: NiceGit - Source control for normal people
 author:
   name: Dan
   email: dan@nicegit.com
