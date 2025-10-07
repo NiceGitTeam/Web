@@ -1,0 +1,25 @@
+---
+title: Thank You
+---
+
+<h2>Thank You for Signing Up!</h2>
+<p class="subtext">We're excited to have you join our Beta program. Check your email for next steps.</p>
+<p class="subtext"><a href="/">Back to NiceGit</a></p>
+
+<script>
+	// Check if this is a form submission (via URL parameter)
+	const urlParams = new URLSearchParams(window.location.search);
+	if (urlParams.get('from') === 'signup') {
+		// Track successful signup
+		if (typeof gtag !== 'undefined') {
+			gtag('event', 'sign_up', { 'method': 'website_form', 'content_type': 'beta_signup' });
+			console.log('Sign up event tracked in Google Analytics');
+		}
+
+		// Clean up URL to remove parameter (optional, for cleaner URLs)
+		if (window.history.replaceState) {
+			const cleanUrl = window.location.pathname;
+			window.history.replaceState({}, document.title, cleanUrl);
+		}
+	}
+</script>
