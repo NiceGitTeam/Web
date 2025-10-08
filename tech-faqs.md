@@ -7,7 +7,7 @@ heading: Technical FAQs
 
 Yes.
 
-NiceGit works with all of these major Git hosting providers. If you already have a repoitory, there's nothing to change.
+NiceGit works with all of these major Git hosting providers. If you already have a repository, there's nothing to change.
 For new projects, just set up a repository on the host of your choice and then access it through the NiceGit desktop app.
 
 We also support Self Managed GitLab instances.
