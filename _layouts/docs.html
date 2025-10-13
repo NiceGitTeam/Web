@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="content">
+	<section class="docs-page">
+		<div class="container">
+			<div class="docs-content">
+				{% if page.heading %}
+					<h1>{{ page.heading }}</h1>
+				{% elsif page.title %}
+					<h1>{{ page.title }}</h1>
+				{% endif %}
+				{% if page.description %}
+					<p class="docs-description">{{ page.description }}</p>
+				{% endif %}
+				{{ content }}
+			</div>
+		</div>
+	</section>
+</div>

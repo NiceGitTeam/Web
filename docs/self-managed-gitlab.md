@@ -1,6 +1,7 @@
 ---
 title: Self-Managed GitLab Setup
 heading: Setting Up NiceGit for your Self-Managed GitLab
+layout: docs
 ---
 
 NiceGit supports [Self-Managed GitLab](https://docs.gitlab.com/topics/offline/quick_start_guide/). This guide prepares
@@ -8,6 +9,9 @@ your environment to work with NiceGit. Follow these steps before using NiceGit w
 
 Self-Managed GitLab environments typically have their own domain, for example `gitlab.mycompany.com` or similar. Please
 replace `<mydomain>` in the instructions below with the relevent domain for your environment.
+
+* This will become a table of contents (this text will be scrapped).
+{:toc}
 
 ## Prerequisites
 
@@ -34,7 +38,7 @@ replace `<mydomain>` in the instructions below with the relevent domain for your
 1. Click _Save application_
 1. You should see a message _The application was created successfully_. The screen should look like this:
 
-    ![GitLab Application Created](/images//docs/GitLab%20Application%20Created.png){: class="small" }
+    ![GitLab Application Created](/images//docs/GitLab%20Application%20Created.png){: class="medium" }
 
 1. Note the value of _Application ID_
 1. Copy the value of _Secret_ and keep it in a secure location. It will be needed later.
@@ -48,7 +52,7 @@ replace `<mydomain>` in the instructions below with the relevent domain for your
    - **Do not** include the _Secret_ from Step 2
 1. NiceGit support will arrange to securely share the _Secret_ value and register your environment
 
-## Step 6: Test the Connection
+## Step 4: Test the Connection
 
 After the NiceGit Support Team hs confirmed registration: 
 
@@ -56,7 +60,7 @@ After the NiceGit Support Team hs confirmed registration:
 2. Go to _Project -> Login..._
 3. Select _Self-Managed GitLab_
 4. Enter the domain of your GitLab environment. (e.g., `https://gitlab.mycompany.com`)
-    ![Enter GitLab Domain](/images/docs/Enter%20GitLab%20Domain.png)
+    ![Enter GitLab Domain](/images/docs/Enter%20GitLab%20Domain.png){: class="small" }
 5. Click **Connect**
 6. You'll be redirected to your GitLab instance to authorize NiceGit
 7. After authorization, you should be able to access your repositories through NiceGit
