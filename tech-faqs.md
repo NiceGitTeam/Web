@@ -1,6 +1,7 @@
 ---
 title: Technical FAQs
 heading: Technical FAQs
+layout: docs
 ---
 
 ### Does NiceGit work with GitHub / GitLab / Bitbucket?
@@ -10,7 +11,7 @@ Yes.
 NiceGit works with all of these major Git hosting providers. If you already have a repository, there's nothing to change.
 For new projects, just set up a repository on the host of your choice and then access it through the NiceGit desktop app.
 
-We also support Self Managed GitLab instances.
+[We also support Self Managed GitLab instances.](/docs/self-managed-gitlab)
 
 ### Does NiceGit store our project files?
 
