@@ -2,7 +2,7 @@
 layout: post
 title: "The Jiggler: Chaos Engineering for Git"
 author_staff_member: Dan
-categories: [development, testing]
+categories: [development, ai]
 excerpt_separator: <!--more-->
 ---
 
@@ -14,7 +14,7 @@ Testing a multi-user real-time collaboration tool? Welcome to hell.
 
 ## The Problem
 
-NiceGit is designed for teams working together on the same Git repository. That means multiple people pushing, pulling, branching, and merging. Sometimes all at the same time. In theory, this should work flawlessly. In practice, every possible race condition and state synchronization bug will crawl out of the woodwork the moment two users breathe near the same branch.
+[NiceGit](/) is designed for teams working together on the same Git repository. That means multiple people pushing, pulling, branching, and merging. Sometimes all at the same time. In theory, this should work flawlessly. In practice, every possible race condition and state synchronization bug will crawl out of the woodwork the moment two users breathe near the same branch.
 
 But how do you test for this? You can't exactly hire a dozen developers to frantically hammer your staging server while you watch the logs and pray.
 
@@ -30,9 +30,9 @@ Think of it as a stress test designed by someone who's seen *too much*. Someone 
 
 ## Why "The Jiggler"?
 
-Because it jiggles your Git repository like a hyperactive child with a snow globe. Also because "Project Chaos Monkey But For Git And Also We're Running Out Of Naming Ideas" didn't fit on the whiteboard.
+Because it jiggles your Git repository like a hyperactive child with a snow globe. Also because "Project [Chaos Monkey](https://netflix.github.io/chaosmonkey/) But For Git And Also We're Running Out Of Naming Ideas" didn't fit on the whiteboard.
 
-The approach is inspired by my time in Game Development where 'button mashing' tools are sometimes used to spam a game with random inputs. While it sounds haphazard, and is, it's often an incredibly effective way to find bugs. 
+The approach is inspired by my time in Game Development where 'button mashing' tools are sometimes used to spam a game with random inputs. While it sounds haphazard, and is, it's often an incredibly effective way to find bugs.
 
 ## What Does It Actually Do?
 
@@ -48,7 +48,7 @@ All of this happens *simultaneously*, because the best bugs only appear when Mur
 
 ## Jiggler, Son of Claude
 
-Standalone tool scripts are a great use case for AI code generation. The lack of dependencies on other systems, absence of a UI, small codebase and relatively low risk all play to LLMs' strengths. In this case Anthropic's Claude Code LLM was able to produce a working version from just a single prompt:
+Standalone tool scripts are a great use case for AI code generation. The lack of dependencies on other systems, absence of a UI, small codebase and relatively low risk all play to LLMs' strengths. In this case [Anthropic's Claude Code](https://www.anthropic.com/claude/code) LLM was able to produce a working version from just a single prompt:
 
 ```text
 Create a new ts-node script to perform a series of Git operations on a given Git repository.
@@ -61,9 +61,9 @@ Create a new ts-node script to perform a series of Git operations on a given Git
 - operations could include:
 -  editing existing text files
 - adding and removing text files
-- adding, removing and editing image files using ImageMagick
+- adding, removing and editing image files using [ImageMagick](https://imagemagick.org/)
 
-The repo will use GitLFS so ensure the script accounts for this.
+The repo will use [Git LFS](https://git-lfs.com/) so ensure the script accounts for this.
 
 Call the script 'repo-jiggler'
 ```
@@ -76,7 +76,7 @@ update the script so that some files are never deleted. this should allow files 
 
 and we're done!
 
-There's a lot of hype around AI at the moment, so I'm posting this an example of a best case experience, this certainly isn't typical of AI assisted coding which normally needs a **lot** more supervision and manual intervention.
+*There's a lot of hype around AI at the moment, which I don't want to add to. So I'm posting this an example of a best case experience, this certainly isn't typical of AI assisted coding which normally needs a **lot** more supervision and manual intervention.*
 
 ## The Lesson
 
