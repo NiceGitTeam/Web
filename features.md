@@ -38,7 +38,7 @@ One of the most common issues with working on shared files is muliple people try
 
 ![MacOS Preview app showing a locked image file](/images/Preview Locked.png)
 
-NiceGit solves this problem through our automated file locking system. As soon as one person starts working on a file, the rest of the team is notified and the file is 'locked', preventing them from making changes. The file is automatically unlocked as soon as it is safe to work on. Most of the time you'll never even notice it's happening!
+NiceGit solves this problem through our automated, intelligent file locking system. As soon as one person starts working on a file, the rest of the team is notified and the file is 'locked', preventing them from making changes. The file is automatically unlocked as soon as it is safe to work on. Most of the time you'll never even notice it's happening!
 
 ## All the power of Git, none of the complexity
 

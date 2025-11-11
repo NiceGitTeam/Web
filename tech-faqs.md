@@ -46,7 +46,7 @@ any text editor or IDE, it's toally up to you.
 
 No. NiceGit is a full-stack platform that is continually monitoring your project using back-end services as well
 as our NiceGit desktop app. This supports features such as real-time updates on your team-mates' activity,
-and our unique automated file locking.
+and our unique Intelligent Locks automated file locking.
 
 ### How secure is NiceGit?
 
