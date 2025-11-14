@@ -119,7 +119,13 @@ _comments:
 
 downloads:
   builds:
+    - version: "0.2.0"
+      filename: "NiceGit-0.2.0-universal.dmg"
+      date: "2025-11-07"
+    - version: "0.2.1"
+      filename: "NiceGit-0.2.1-universal.dmg"
+      date: "2025-11-11"
     - version: "0.2.2"
       filename: "NiceGit-0.2.2-universal.dmg"
-      date: "2025-01-15"
+      date: "2025-11-14"
   current_version: "0.2.2"
