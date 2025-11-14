@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git lfs locks:*)",
       "Bash(awk:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(chmod:*)"
     ],
     "deny": [],
     "ask": []

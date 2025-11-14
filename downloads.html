@@ -1,0 +1,50 @@
+---
+title: "NiceGit Downloads"
+description: Download NiceGit builds
+sitemap: false
+---
+<section class="hero">
+	<div class="text-container">
+		<h1>NiceGit Downloads</h1>
+		<p class="subtext">Available builds for NiceGit</p>
+	</div>
+</section>
+
+<div class="content">
+	<section>
+		<div class="container">
+			<h2>Current Version</h2>
+			<div class="download-item">
+				<h3>NiceGit {{ site.downloads.current_version }}</h3>
+				<p>Latest stable release</p>
+				<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }}-universal.dmg" class="button">Download</a>
+			</div>
+
+			<h2>All Builds</h2>
+			{% for build in site.downloads.builds reversed %}
+			<div class="download-item">
+				<h3>Version {{ build.version }}</h3>
+				<p>Released: {{ build.date | date: "%B %d, %Y" }}</p>
+				<a href="https://download.nicegit.com/{{ build.filename }}" class="button alt">Download {{ build.filename }}</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+</div>
+
+<style>
+.download-item {
+	padding: 2em;
+	margin: 1em 0;
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+}
+
+.download-item h3 {
+	margin-top: 0;
+}
+
+.download-item .button {
+	margin-top: 1em;
+}
+</style>
