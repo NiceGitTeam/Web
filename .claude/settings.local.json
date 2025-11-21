@@ -4,7 +4,8 @@
       "Bash(git lfs locks:*)",
       "Bash(awk:*)",
       "Bash(xargs:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(git lfs unlock:*)"
     ],
     "deny": [],
     "ask": []
