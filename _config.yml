@@ -128,4 +128,7 @@ downloads:
     - version: "0.2.2"
       filename: "NiceGit-0.2.2-universal.dmg"
       date: "2025-11-14"
-  current_version: "0.2.2"
+    - version: "0.3.2"
+      filename: "NiceGit-0.3.2-universal.dmg"
+      date: "2025-11-28"
+  current_version: "0.3.2"
