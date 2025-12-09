@@ -14,11 +14,13 @@ import { get } from 'https';
 
 const BUCKET_NAME = 'download.nicegit.com';
 const CONFIG_FILE = '_config.yml';
-const BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+)-universal\.dmg/;
+const MAC_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+)-universal\.dmg/;
+const WINDOWS_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+) Setup\.exe/;
 
 interface Build {
   version: string;
-  filename: string;
+  mac_filename?: string;
+  windows_filename?: string;
   date: string;
 }
 
@@ -73,25 +75,36 @@ function getBucketContents(): Promise<ListBucketResult> {
  * Extract builds from bucket contents
  */
 function extractBuilds(bucketData: ListBucketResult): Build[] {
-  const builds: Build[] = [];
+  const buildMap = new Map<string, Build>();
 
   if (!bucketData.Contents) {
-    return builds;
+    return [];
   }
 
   for (const item of bucketData.Contents) {
-    const match = item.Key.match(BUILD_PATTERN);
-    if (match) {
-      const version = match[1];
-      const date = item.LastModified.split('T')[0]; // Extract date part
+    const macMatch = item.Key.match(MAC_BUILD_PATTERN);
+    const windowsMatch = item.Key.match(WINDOWS_BUILD_PATTERN);
 
-      builds.push({
-        version,
-        filename: item.Key,
-        date
-      });
+    if (macMatch) {
+      const version = macMatch[1];
+      const date = item.LastModified.split('T')[0];
+
+      if (!buildMap.has(version)) {
+        buildMap.set(version, { version, date });
+      }
+      buildMap.get(version)!.mac_filename = item.Key;
+    } else if (windowsMatch) {
+      const version = windowsMatch[1];
+      const date = item.LastModified.split('T')[0];
+
+      if (!buildMap.has(version)) {
+        buildMap.set(version, { version, date });
+      }
+      buildMap.get(version)!.windows_filename = item.Key;
     }
   }
+
+  const builds = Array.from(buildMap.values());
 
   // Sort by semantic version
   builds.sort((a, b) => {
@@ -135,7 +148,12 @@ function updateConfig(builds: Build[]): void {
 
   for (const build of builds) {
     newDownloadsSection += `    - version: "${build.version}"\n`;
-    newDownloadsSection += `      filename: "${build.filename}"\n`;
+    if (build.mac_filename) {
+      newDownloadsSection += `      mac_filename: "${build.mac_filename}"\n`;
+    }
+    if (build.windows_filename) {
+      newDownloadsSection += `      windows_filename: "${build.windows_filename}"\n`;
+    }
     newDownloadsSection += `      date: "${build.date}"\n`;
   }
 

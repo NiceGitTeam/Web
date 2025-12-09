@@ -11,7 +11,10 @@ sitemap: false
 			<div class="download-item">
 				<h3>NiceGit {{ site.downloads.current_version }}</h3>
 				<p>Latest stable release</p>
-				<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }}-universal.dmg" class="button">Download</a>
+				<div class="download-buttons">
+					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }}-universal.dmg" class="button">Download for Mac</a>
+					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }} Setup.exe" class="button">Download for Windows</a>
+				</div>
 			</div>
 
 			<h2>All Builds</h2>
@@ -19,7 +22,14 @@ sitemap: false
 			<div class="download-item">
 				<h3>Version {{ build.version }}</h3>
 				<p>Released: {{ build.date | date: "%B %d, %Y" }}</p>
-				<a href="https://download.nicegit.com/{{ build.filename }}" class="button alt">Download {{ build.filename }}</a>
+				<div class="download-buttons">
+					{% if build.mac_filename %}
+					<a href="https://download.nicegit.com/{{ build.mac_filename }}" class="button alt">Download for Mac</a>
+					{% endif %}
+					{% if build.windows_filename %}
+					<a href="https://download.nicegit.com/{{ build.windows_filename }}" class="button alt">Download for Windows</a>
+					{% endif %}
+				</div>
 			</div>
 			{% endfor %}
 		</div>
@@ -40,5 +50,11 @@ sitemap: false
 
 .download-item .button {
 	margin-top: 1em;
+}
+
+.download-buttons {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
 }
 </style>
