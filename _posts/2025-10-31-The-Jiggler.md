@@ -2,7 +2,7 @@
 layout: post
 title: "The Jiggler: Chaos Engineering for Git"
 author_staff_member: Dan
-categories: [development, ai]
+categories: [development, AI]
 excerpt_separator: <!--more-->
 ---
 
