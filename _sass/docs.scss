@@ -67,6 +67,11 @@
 			li {
 				margin-bottom: 10px;
 			}
+
+			li li {
+				margin-bottom: 0;
+				font-size: 0.8em;
+			}
 		}
 
 		code {
