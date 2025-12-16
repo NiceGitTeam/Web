@@ -9,7 +9,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 * This will become a table of contents (this text will be scrapped).
 {:toc}
 
-## macOS Installation
+## macOS
 
 ### Requirements
 
@@ -27,7 +27,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 ![macOS Privacy & Security Settings](/images/docs/Mac Security.png){: class="small" }
 
-## Windows Installation
+## Windows
 
 ### Requirements
 
