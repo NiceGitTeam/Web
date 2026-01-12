@@ -11,7 +11,7 @@
         {
             "label": "Update Downlaods",
             "type": "shell",
-            "command": "npx ts-node UpdateDownloads.ts"
+            "command": "npx tsx UpdateDownloads.ts"
         }
     ]
 }
