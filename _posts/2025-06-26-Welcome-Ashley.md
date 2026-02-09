@@ -6,7 +6,7 @@ categories: [business, startup]
 excerpt_separator: <!--more-->
 ---
 
-NiceGit is proud to welcome a new addition, and an old friend, to the team, [Ashley Law-Smith](/team/ashley). Ash joins as Fractional Chief Financial Officer and has already been hard at work incorporating NiceGit as a real, grown up company and setting up its financial systems for the journey ahead.
+NiceGit is proud to welcome a new addition, and an old friend, to the team, [Ashley Law-Smith](/team/ashley/). Ash joins as Fractional Chief Financial Officer and has already been hard at work incorporating NiceGit as a real, grown up company and setting up its financial systems for the journey ahead.
 
 <!--more-->
 

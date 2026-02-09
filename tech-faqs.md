@@ -11,7 +11,7 @@ Yes.
 NiceGit works with all of these major Git hosting providers. If you already have a repository, there's nothing to change.
 For new projects, just set up a repository on the host of your choice and then access it through the NiceGit desktop app.
 
-[We also support Self Managed GitLab instances.](/docs/self-managed-gitlab)
+[We also support Self Managed GitLab instances.](/docs/self-managed-gitlab/)
 
 ### Does NiceGit store our project files?
 
@@ -52,4 +52,4 @@ and our unique Intelligent Locks automated file locking.
 
 Very. We use state of the art cloud infrastructure from Google, follow the latest industry best practises, and all
 user data is held securely in enterprise grade databases, with encryption for sensitive information.
-Please [contact](/contact) us if you have any specific queries or requirements.
+Please [contact](/contact/) us if you have any specific queries or requirements.

@@ -10,7 +10,7 @@ your environment to work with NiceGit. Follow these steps before using NiceGit w
 Self-Managed GitLab environments typically have their own domain, for example `gitlab.mycompany.com` or similar. Please
 replace `<mydomain>` in the instructions below with the relevent domain for your environment.
 
-For information about NiceGit generally, please see our [Technical FAQs](/tech-faqs)
+For information about NiceGit generally, please see our [Technical FAQs](/tech-faqs/)
 
 * This will become a table of contents (this text will be scrapped).
 {:toc}
@@ -69,7 +69,7 @@ After the NiceGit Support Team hs confirmed registration:
 
 ## Problems?
 
-Please [contact our support team](/contact) with:
+Please [contact our support team](/contact/) with:
 
 * Your GitLab version
 * Your GitLab environment's domain

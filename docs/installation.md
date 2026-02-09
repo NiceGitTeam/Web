@@ -4,7 +4,7 @@ heading: Installing NiceGit
 layout: docs
 ---
 
-NiceGit is available for macOS and Windows. Download the latest version from our [downloads page](/downloads).
+NiceGit is available for macOS and Windows. Download the latest version from our [downloads page](/downloads/).
 
 * This will become a table of contents (this text will be scrapped).
 {:toc}
@@ -13,12 +13,11 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 ### Requirements
 
-* macOS 11 (Big Sur) or later
-* Git repositories should have been cloned to a folder on the local machine before opening NiceGit
+* macOS 12 (Monterey) or later
 
 ### Installation Steps
 
-1. Download the latest macOS installer from [/downloads](/downloads)
+1. Download the latest macOS installer from [/downloads](/downloads/)
 1. Open the downloaded _NiceGit-x.x.x-universal.dmg_ file
 1. Drag the NiceGit application to your _Applications_ folder
 1. Launch NiceGit from your _Applications_ folder
@@ -35,7 +34,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 ### Installation Steps
 
-1. Download the latest Windows installer from [/downloads](/downloads)
+1. Download the latest Windows installer from [/downloads](/downloads/)
 1. Run the downloaded _NiceGit-x.x.x Setup.exe_ file
 1. Follow the installation wizard prompts
 1. Launch NiceGit from the _Start_ menu or desktop shortcut
@@ -48,8 +47,8 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 To find out more about how to setup and use NiceGit for your team, see our documentation for:
 
-* [Technical FAQs](/tech-faqs)
-* [Setting up Self-Managed GitLab](/docs/self-managed-gitlab)
+* [Technical FAQs](/tech-faqs/)
+* [Setting up Self-Managed GitLab](/docs/self-managed-gitlab/)
 
 ## Problems?
 

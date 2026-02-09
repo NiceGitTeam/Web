@@ -46,7 +46,7 @@ Thank you to everyone, friends, colleagues, Launch Club founders and new contact
 
 Based on our research and your feedback, here's what we're focusing on for the next couple of weeks:
 
-1. Lots more user interviews. If you'd be interested in taking part please [let me know](/contact.html).
+1. Lots more user interviews. If you'd be interested in taking part please [let me know](/contact/).
 1. Creating wireframe designs based on the above. This will also define the feature set for [our first Beta release](/#sign-up).
 1. Continuing to explore ways to spread the word and get sign ups for the Beta. A major focus has been cold email outreach - you can read about our [24 Hour Validation Challenge](/2024/03/28/validation-challenge.html) to see how the results which have so far not been very scalable.
 1. Find some new placeholder portrait images =)

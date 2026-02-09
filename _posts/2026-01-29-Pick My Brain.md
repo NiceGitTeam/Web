@@ -16,7 +16,7 @@ In the latest episode of his [Pick My Brain podcast](https://dayone.fm/show/pick
 
 On the investment side, we talk about why products that unlock non-technical capacity can punch above their weight in the age of AI-assisted development, how investors think about 'headache pills' and 'vitamin pills', and how neither of us knows the difference between a [metaphor](https://www.oed.com/dictionary/analogy_n?tab=meaning_and_use#4177757) and an [analogy]((https://www.oed.com/dictionary/metaphor_n?tab=meaning_and_use#37059120)).
 
-But what do you think? Is full team, AI-assisted product development the future? How would you reach the right global audience? Does bootstrapping and launching make sense? [Let me know!](/contact)
+But what do you think? Is full team, AI-assisted product development the future? How would you reach the right global audience? Does bootstrapping and launching make sense? [Let me know!](/contact/)
 
 Thanks to the team at [DayOne.fm](https://dayone.fm) for making it happen, and to [CorporateCubes.Co](https://CorporateCubes.Co) for generously rescheduling the studio time, and to [Galah Cyber](https://www.galahcyber.com.au/) for sponsoring.
 

@@ -15,4 +15,4 @@ Most teams choose to their projects on one of the major cloud hosting providers,
 
 Integrating NiceGit's unique full-stack approach to source control required some upgrades to our back-end systems, and especially to authentication. There were a couple of technical challenges to overcome, and the good news is that not only is the feature fully working, the back-end improvements benefit all users. A better, faster sign in experience being just the start. Special thank you to GitLab for providing an Enterprise License to assist development.
 
-If you have any particular requirements that might help with your access to the [NiceGit Beta](/beta), please do [let us know](/contact) and we'll do our best to accommodate them!
+If you have any particular requirements that might help with your access to the [NiceGit Beta](/beta/), please do [let us know](/contact/) and we'll do our best to accommodate them!
