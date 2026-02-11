@@ -40,6 +40,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 1. Launch NiceGit from the _Start_ menu or desktop shortcut
 1. If no shortcuts are created, the app can be opened from _c:\Users\<username>\AppData\Local\nicegit\NiceGit.exe_
 1. On opening the app, Windows Defender may show a security warning. Choose _Run anyway_.
+  (If the _Run anyway_ button is not visible, click _More info..._ to reveal it)
 
 ![Windows Defender confirmation prompt](/images/docs/Windows Security.png){: class="small" }
 
