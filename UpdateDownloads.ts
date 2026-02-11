@@ -3,14 +3,14 @@
  * Script to sync downloads configuration from Google Cloud Storage bucket.
  * Updates _config.yml with available NiceGit builds.
  *
- * No external dependencies - uses only Node.js built-in modules.
+ * Requires gcloud CLI tool to be installed and authenticated.
  *
  * Usage:
  * - ts-node update_downloads.ts
  */
 
+import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
-import { get } from 'https';
 
 const BUCKET_NAME = 'download.nicegit.com';
 const CONFIG_FILE = '_config.yml';
@@ -24,83 +24,57 @@ interface Build {
   date: string;
 }
 
-interface ListBucketResult {
-  Contents?: Array<{
-    Key: string;
-    LastModified: string;
-  }>;
+interface BucketItem {
+  name: string;
+  timeCreated: string;
 }
 
 /**
- * Fetch bucket contents via GCS XML API (no auth required for public buckets)
+ * Fetch bucket contents using gcloud CLI
  */
-function getBucketContents(): Promise<ListBucketResult> {
-  return new Promise((resolve, reject) => {
-    const url = `https://storage.googleapis.com/${BUCKET_NAME}`;
+function getBucketContents(): BucketItem[] {
+  try {
+    const output = execSync(`gcloud storage ls --json gs://${BUCKET_NAME}`, {
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe']
+    });
 
-    get(url, (res) => {
-      let data = '';
-
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
-
-      res.on('end', () => {
-        try {
-          // Parse XML response manually (no dependencies)
-          const contents: ListBucketResult = { Contents: [] };
-          const keyMatches = data.matchAll(/<Key>(.*?)<\/Key>/g);
-          const dateMatches = data.matchAll(/<LastModified>(.*?)<\/LastModified>/g);
-
-          const keys = Array.from(keyMatches).map(m => m[1]);
-          const dates = Array.from(dateMatches).map(m => m[1]);
-
-          for (let i = 0; i < keys.length; i++) {
-            contents.Contents!.push({
-              Key: keys[i],
-              LastModified: dates[i]
-            });
-          }
-
-          resolve(contents);
-        } catch (e) {
-          reject(new Error(`Failed to parse XML: ${e}`));
-        }
-      });
-    }).on('error', reject);
-  });
+    const items = JSON.parse(output);
+    return items.map((item: any) => ({
+      name: item.metadata.name,
+      timeCreated: item.metadata.timeCreated
+    }));
+  } catch (e) {
+    throw new Error(`Failed to fetch bucket contents: ${e}`);
+  }
 }
 
 /**
  * Extract builds from bucket contents
  */
-function extractBuilds(bucketData: ListBucketResult): Build[] {
+function extractBuilds(bucketData: BucketItem[]): Build[] {
   const buildMap = new Map<string, Build>();
 
-  if (!bucketData.Contents) {
-    return [];
-  }
-
-  for (const item of bucketData.Contents) {
-    const macMatch = item.Key.match(MAC_BUILD_PATTERN);
-    const windowsMatch = item.Key.match(WINDOWS_BUILD_PATTERN);
+  for (const item of bucketData) {
+    const macMatch = item.name.match(MAC_BUILD_PATTERN);
+    const windowsMatch = item.name.match(WINDOWS_BUILD_PATTERN);
 
     if (macMatch) {
       const version = macMatch[1];
-      const date = item.LastModified.split('T')[0];
+      const date = item.timeCreated.split('T')[0];
 
       if (!buildMap.has(version)) {
         buildMap.set(version, { version, date });
       }
-      buildMap.get(version)!.mac_filename = item.Key;
+      buildMap.get(version)!.mac_filename = item.name;
     } else if (windowsMatch) {
       const version = windowsMatch[1];
-      const date = item.LastModified.split('T')[0];
+      const date = item.timeCreated.split('T')[0];
 
       if (!buildMap.has(version)) {
         buildMap.set(version, { version, date });
       }
-      buildMap.get(version)!.windows_filename = item.Key;
+      buildMap.get(version)!.windows_filename = item.name;
     }
   }
 
@@ -174,10 +148,10 @@ function updateConfig(builds: Build[]): void {
 /**
  * Main execution
  */
-async function main(): Promise<void> {
+function main(): void {
   try {
     console.log(`Fetching contents from gs://${BUCKET_NAME}...`);
-    const bucketData = await getBucketContents();
+    const bucketData = getBucketContents();
     const builds = extractBuilds(bucketData);
     updateConfig(builds);
   } catch (e) {
