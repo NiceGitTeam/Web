@@ -21,10 +21,6 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 1. Open the downloaded _NiceGit-x.x.x-universal.dmg_ file
 1. Drag the NiceGit application to your _Applications_ folder
 1. Launch NiceGit from your _Applications_ folder
-1. On opening the app, macOS will probably show a security warning and ask you to move it to the bin. Instead, choose _Done_.
-1. Open _System Settings → Privacy & Security_. Half way down the pane click the button to _Open anyway_ the NiceGit app.
-
-![macOS Privacy & Security Settings](/images/docs/Mac Security.png){: class="small" }
 
 ## Windows
 
