@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "test",
+            "label": "Serve",
             "type": "shell",
             "command": "jekyll serve"
         },

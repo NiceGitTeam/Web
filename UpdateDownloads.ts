@@ -16,6 +16,7 @@ const BUCKET_NAME = 'download.nicegit.com';
 const CONFIG_FILE = '_config.yml';
 const MAC_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+)-universal\.dmg/;
 const WINDOWS_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+) Setup\.exe/;
+const MINIMUM_VERSION = '0.7.0'; // Only show builds >= this version
 
 interface Build {
   version: string;
@@ -50,6 +51,22 @@ function getBucketContents(): BucketItem[] {
 }
 
 /**
+ * Compare two semantic versions
+ * Returns: -1 if a < b, 0 if a === b, 1 if a > b
+ */
+function compareVersions(a: string, b: string): number {
+  const aParts = a.split('.').map(Number);
+  const bParts = b.split('.').map(Number);
+
+  for (let i = 0; i < 3; i++) {
+    if (aParts[i] !== bParts[i]) {
+      return Math.sign(aParts[i] - bParts[i]);
+    }
+  }
+  return 0;
+}
+
+/**
  * Extract builds from bucket contents
  */
 function extractBuilds(bucketData: BucketItem[]): Build[] {
@@ -80,20 +97,15 @@ function extractBuilds(bucketData: BucketItem[]): Build[] {
 
   const builds = Array.from(buildMap.values());
 
+  // Filter builds by minimum version
+  const filteredBuilds = builds.filter(build =>
+    compareVersions(build.version, MINIMUM_VERSION) >= 0
+  );
+
   // Sort by semantic version
-  builds.sort((a, b) => {
-    const aParts = a.version.split('.').map(Number);
-    const bParts = b.version.split('.').map(Number);
+  filteredBuilds.sort((a, b) => compareVersions(a.version, b.version));
 
-    for (let i = 0; i < 3; i++) {
-      if (aParts[i] !== bParts[i]) {
-        return aParts[i] - bParts[i];
-      }
-    }
-    return 0;
-  });
-
-  return builds;
+  return filteredBuilds;
 }
 
 /**
