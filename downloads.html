@@ -12,8 +12,8 @@ sitemap: false
 				<h3>NiceGit {{ site.downloads.current_version }}</h3>
 				<p>Latest stable release</p>
 				<div class="download-buttons">
-					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }}-universal.dmg" class="button">Download for Mac</a>
-					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }} Setup.exe" class="button">Download for Windows</a>
+					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }}-universal.dmg" class="button" onclick="gtag('event', 'download', {'platform': 'mac', 'version': '{{ site.downloads.current_version }}', 'type': 'current'});">Download for Mac</a>
+					<a href="https://download.nicegit.com/NiceGit-{{ site.downloads.current_version }} Setup.exe" class="button" onclick="gtag('event', 'download', {'platform': 'windows', 'version': '{{ site.downloads.current_version }}', 'type': 'current'});">Download for Windows</a>
 				</div>
 			</div>
 
@@ -24,10 +24,10 @@ sitemap: false
 				<p>Released: {{ build.date | date: "%B %d, %Y" }}</p>
 				<div class="download-buttons">
 					{% if build.mac_filename %}
-					<a href="https://download.nicegit.com/{{ build.mac_filename }}" class="button alt">Download for Mac</a>
+					<a href="https://download.nicegit.com/{{ build.mac_filename }}" class="button alt" onclick="gtag('event', 'download', {'platform': 'mac', 'version': '{{ build.version }}', 'type': 'older'});">Download for Mac</a>
 					{% endif %}
 					{% if build.windows_filename %}
-					<a href="https://download.nicegit.com/{{ build.windows_filename }}" class="button alt">Download for Windows</a>
+					<a href="https://download.nicegit.com/{{ build.windows_filename }}" class="button alt" onclick="gtag('event', 'download', {'platform': 'windows', 'version': '{{ build.version }}', 'type': 'older'});">Download for Windows</a>
 					{% endif %}
 				</div>
 			</div>
