@@ -12,13 +12,17 @@ Follow these steps to get up and running with NiceGit:
 ## Step 2: Open NiceGit
 
    After installation, launch NiceGit on your device
+   
    ![NiceGit Welcome Screen](/images/docs/getting%20started%201.png){: class="small" }
 
 ## Step 3: Create your account
 
    Enter your email address, set a password, and create your profile.
+   <div class="img-row" markdown="1">
    ![Login Screen](/images/docs/getting%20started%202.png){: class="small border" }
+   
    ![User Profile Screen](/images/docs/getting%20started%202b.png){: class="small border" }
+   </div>
 
 ## Step 4: Open a project
 
