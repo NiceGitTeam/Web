@@ -4,8 +4,7 @@ heading: Installing NiceGit
 layout: docs
 ---
 
-NiceGit is available for macOS and Windows. 
-Download the latest version from our [downloads page](/downloads/).
+NiceGit is available for macOS and Windows. Download the latest version from our [downloads page](/downloads/).
 
 * This will become a table of contents (this text will be scrapped).
 {:toc}
