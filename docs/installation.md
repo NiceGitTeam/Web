@@ -21,6 +21,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 1. Open the downloaded _NiceGit-x.x.x-universal.dmg_ file
 1. Drag the NiceGit application to your _Applications_ folder
 1. Launch NiceGit from your _Applications_ folder
+1. Now use our [Getting Started Guide] to start using NiceGit!
 
 ## Windows
 
@@ -37,6 +38,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 1. If no shortcuts are created, the app can be opened from _c:\Users\<username>\AppData\Local\nicegit\NiceGit.exe_
 1. On opening the app, Windows Defender may show a security warning. Choose _Run anyway_.
   (If the _Run anyway_ button is not visible, click _More info..._ to reveal it)
+1. Now use our [Getting Started Guide] to start using NiceGit!
 
 ![Windows Defender confirmation prompt](/images/docs/Windows Security.png){: class="small" }
 
@@ -44,15 +46,8 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 To find out more about how to setup and use NiceGit for your team, see our documentation for:
 
+* [Getting Started](/docs/getting-started)
 * [Technical FAQs](/tech-faqs/)
 * [Setting up Self-Managed GitLab](/docs/self-managed-gitlab/)
 
-## Problems?
-
-If you encounter any issues during installation, please let us know by either:
-
-* Using the _Feedback_ button within the NiceGit app
-* [emailing our support team](mailto://support@nicegit.com) with:
-  * The email address associated with your NiceGit account
-  * A description of the problem
-  * The error message you're seeing, if applicable
+{% include docs-problems.md %}

@@ -40,7 +40,7 @@ It's great to see a simple action leading to tangible results though.
 
 (btw the Toad in the Hole also went down very well with my son)
 
-![Site visits in Google Analytis](/images/posts/Apollo Analytics.png){: class="small" }
+![Site visits in Google Analytics](/images/posts/Apollo Analytics.png){: class="small" }
 
 ## _Thursday, 1pm_ - Working in public
 
