@@ -60,7 +60,7 @@ defaults:
       layout: "page"
   -
     scope:
-      path: "index.html"
+      path: "index.md"
     values:
       layout: "default"
   -

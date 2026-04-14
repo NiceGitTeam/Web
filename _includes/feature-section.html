@@ -1,0 +1,11 @@
+<section{% if include.class %} class="{{ include.class }}"{% endif %}>
+	<div class="container flex">
+		<div class="text editable">
+			{% if include.heading %}<h2>{{ include.heading }}</h2>{% endif %}
+			{{ include.text }}
+		</div>
+		<div class="image{% if include.image_class %} {{ include.image_class }}{% endif %}">
+			<img src="{{ include.image }}" alt="{{ include.image_alt }}" class="screenshot editable" />
+		</div>
+	</div>
+</section>

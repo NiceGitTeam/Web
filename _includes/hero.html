@@ -1,0 +1,19 @@
+<section class="hero">
+	<div class="text-container">
+		<h1 class="editable">{{ include.heading }}</h1>
+		<p class="subtext editable">{{ include.subtext }}</p>
+		{% if include.cta_text %}
+			{% if include.cta_position == "before_image" %}
+			<div class="cta button alt"><a href="{{ include.cta_href }}">{{ include.cta_text }}</a></div>
+			{% endif %}
+		{% endif %}
+		<div>
+			<img src="{{ include.image | default: '/images/Screenshot.png' }}" alt="{{ include.image_alt | default: 'Screenshot' }}" class="screenshot editable" />
+		</div>
+		{% if include.cta_text %}
+			{% unless include.cta_position == "before_image" %}
+			<div class="cta button alt"><a href="{{ include.cta_href }}">{{ include.cta_text }}</a></div>
+			{% endunless %}
+		{% endif %}
+	</div>
+</section>
