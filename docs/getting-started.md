@@ -7,7 +7,7 @@ layout: docs
 Follow these steps to get up and running with NiceGit:
 
 ## Step 1: Install the NiceGit Desktop app
-   [Download and install NiceGit here](/docs/installation/)
+   [Follow these simple steps to install the app on your computer](/docs/installation/)
 
 ## Step 2: Open NiceGit
 
