@@ -7,7 +7,7 @@ layout: default
 {% include hero.html
    heading='Source control <strong>for normal people</strong>'
    subtext="NiceGit is the simpler, faster way for teams to share and track their files."
-   cta_text="Sign Up For NiceGit Beta"
+   cta_text="Sign Up for the NiceGit Beta"
    cta_href="#sign-up"
    cta_position="before_image"
    image="/images/Screenshot.png"

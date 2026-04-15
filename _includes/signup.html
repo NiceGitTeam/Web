@@ -1,8 +1,10 @@
 <div class="container">
 	<!-- If changing content, consider also changing content_type below -->
-	<h2 class="editable"><strong>Sign up</strong> for the NiceGit Beta</h2>
+	<h2 class="editable">
+        {{ include.heading | default: "<strong>Sign up</strong> for the NiceGit Beta" }}
+    </h2>
 	<ul>
-		<li>Be the first to join <strong>our Beta program</strong> and early test releases.</li>
+		<li>Be the first to join <strong>our Beta program</strong> and get notified of test releases.</li>
 		<li>Be among the first to experience a simpler way to manage your projects.</li>
 		<li>Limited spots so secure your place today!</li>
 	</ul>

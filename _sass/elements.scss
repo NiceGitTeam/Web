@@ -9,6 +9,7 @@ html, body {
 
 body {
 	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+	font-weight: 300;
 }
 
 a {
@@ -53,4 +54,8 @@ p, address {
 	color: #666;
 	margin-bottom: 20px;
 	line-height: 1.4em;
+}
+
+li {
+	margin-bottom: 0.8em;
 }
