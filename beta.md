@@ -55,7 +55,7 @@ layout: default
 {% include feature-section.html
    heading="What you'll need"
    text="<p>All you need to get started is a project hosted on GitHub, Bitbucket or GitLab. The NiceGit setup process will guide you through downloading the project or opening it from a folder on your device.</p>
-   <p>NicceGit supports Windows 10 or later and macOS 12 (Monterey) or later for Intel</p>"
+   <p>NicceGit supports Windows 10 or later and macOS 12 (Monterey) or later for Intel and ARM based Macs.</p>"
    image="/images/OpenGitHub.gif"
    image_alt="GitHub login animation"
    image_class="open-github"
@@ -66,4 +66,5 @@ layout: default
      heading="Not ready to download today? <strong>Sign up</strong> to our mailing list"
   %}
 </section>
+
 </div>

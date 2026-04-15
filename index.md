@@ -22,8 +22,8 @@ see what your colleagues are working on right now, not just what they've already
  {% include feature-section.html
     heading="How can I <strong>work faster</strong> and spend more time on what matters?"
     text=work_faster_text
-    image="/images/Screenshot.png"
-    image_alt="Screenshot"
+    image="/images/Syncing.gif"
+    image_alt="One Button Sync animation"
  %}
 
  {% include feature-section.html
@@ -46,8 +46,8 @@ screen. Just one button is all you need to stay in sync.</p>
  {% include feature-section.html
     heading="Source control that puts the <strong>user first</strong>"
     text=user_first_text
-    image="/images/Screenshot.png"
-    image_alt="Screenshot"
+   image="/images/UX Designer.jpg"
+   image_alt="Photo of a UX designer seated at their desk"
  %}
 
  <section class="bottom-cta" id="sign-up">

@@ -42,7 +42,7 @@ NiceGit is available for macOS and Windows. Download the latest version from our
 
 ![Windows Defender confirmation prompt](/images/docs/Windows Security.png){: class="small" }
 
-## More informaion
+## More information
 
 To find out more about how to setup and use NiceGit for your team, see our documentation for:
 
