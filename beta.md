@@ -4,15 +4,51 @@ description: You're joining the first people the world to experience NiceGit and
 layout: default
 ---
 
+{% include hero.html %}
+
 <div class="content">
-	{% capture beta_content %}
-<p>You're moments away from the future of source control. To get started, please <a href="/download">download the latest version of the NiceGit desktop app</a>.</p>
-<p>Setting up NiceGit is as simple as opening the app and signing up. For further information, please see our <a href="/docs/installation">Installation Guide</a> and <a href="/docs/getting-started">Getting Started Guide</a>.</p>
-	{% endcapture %}
-	{% include feature-section.html
-	   heading="<strong>Welcome</strong> to the NiceGit Private Beta."
-	   text=beta_content
-	   image="/images/Screenshot.png"
-	   image_alt="Screenshot"
-	%}
+ {% capture beta_content %}
+    <p>You're moments away from the future of source control. To get started, please <a href="/downloads">download the latest version of the NiceGit desktop app</a>.</p>
+    <p>Setting up NiceGit is as simple as opening the app and signing up. For further information, please see our <a href="/docs/installation">Installation</a> and <a href="/docs/getting-started">Getting Started</a> guides.</p>
+ {% endcapture %}
+
+ {% include feature-section.html
+    heading="<strong>Welcome</strong> to the NiceGit Private Beta."
+    text=beta_content
+    image="/images/Screenshot.png"
+    image_alt="Screenshot"
+ %}
+
+{% include feature-section.html
+   heading="The first <strong>intelligent, real-time</strong> source control platform"
+   text="<p>NiceGit brings the best of both worlds: the reliability of Git with the simplicity of a one-button workflow.</p>
+   <p>It’s designed for peopleteams who want to focus on their work, not on wrangling their tools.
+   And because NiceGit works with all the major hosting providers — GitHub, GitLab, and Bitbucket — your team doesn’t have to change where your projects live. You simply make them easier to manage, without giving up the integrations you already rely on.</p>
+   <p>Much more than just a Git client, NiceGit actively manages your project. See waht your team mates and agents are working on in real-time, removing the potential for merge conflicts.</p>"
+%}
+
+{% capture feedback_content %}
+    <p>Tell us what you would like to see in the future of NiceGit. Your input helps shape the future of the platform.<br/>
+    Please use any of the following channels:<br>
+    <ul>
+    <li>The Feedback Button. Click the button in the bottom-left corner of the NiceGit Desktop app, then let us know what you're thinking.</li>
+    <li>Email us at <a href="mailto://hello@nicegit.com">hello@nicegit.com</a></li>
+    </ul>
+    </p>
+{% endcapture %}
+
+ {% include feature-section.html
+    heading="Your feedback, your ideas"
+    text=feedback_content
+ %}
+
+{% include feature-section.html
+   heading="What you'll need"
+   text="<p>All you need to get started is a project hosted on GitHub, Bitbucket or GitLab. The NiceGit setup process will guide you through downloading the project or opening it from a folder on your device.</p>
+   <p>NicceGit supports Windows 10 or later and macOS 12 (Monterey) or later for Intel</p>"
+   image="/images/OpenGitHub.gif"
+   image_alt="GitHub login animation"
+   image_class="open-github"
+%}
+
 </div>

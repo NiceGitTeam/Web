@@ -1,5 +1,5 @@
 ---
-title: "Join the NiceGit Beta – Make Source Control Simple"
+title: NiceGit - Source control for normal people
 description: NiceGit is the simpler, faster way for teams to share and track their files.
 layout: default
 ---
@@ -26,16 +26,13 @@ see what your colleagues are working on right now, not just what they've already
     image_alt="Screenshot"
  %}
 
- {% capture everything_text %}
-<p>More than just an app, NiceGit is a complete workflow. By always understanding which files people are working on,
-NiceGit has no need for complex, hard to use concepts such as branching and merging. When you're ready to share your
-latest work, just hit the Share button, it really is that simple!</p>
-<p>As its name suggests, NiceGit builds on the awesome power of Git. Integration with your existing projects and
-tools is seamless and all Git hosting providers are supported, including GitHub, Bitbucket and GitLab.</p>
- {% endcapture %}
  {% include feature-section.html
     heading="<strong>Everything you need,</strong> nothing you don't"
-    text=everything_text
+    text="<p>More than just an app, NiceGit is a complete workflow. By always understanding which files people are
+    working on, NiceGit has no need for complex, hard to use concepts such as branching and merging. When you're
+    ready to share your latest work, just hit the Share button, it really is that simple!</p>
+<p>As its name suggests, NiceGit builds on the awesome power of Git. Integration with your existing projects and
+tools is seamless and all Git hosting providers are supported, including GitHub, Bitbucket and GitLab.</p>"
     image="/images/OpenGitHub.gif"
     image_alt="GitHub login animation"
     image_class="open-github"
