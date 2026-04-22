@@ -61,6 +61,8 @@ layout: default
    image_class="open-github"
 %}
 
+{% include supporters.html %}
+
 <section class="bottom-cta" id="sign-up">
   {% include signup.html
      heading="Not ready to download today? <strong>Sign up</strong> to our mailing list"
