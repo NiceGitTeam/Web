@@ -4,34 +4,55 @@
   text-align: center;
 
   .supporters-heading {
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 0.85em;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #888;
-    margin: 0 0 30px;
+    letter-spacing: 0.1em;
+    color: #aaa;
+    margin: 0 0 32px;
   }
 
   .supporters-scroll {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px 60px;
+    gap: 48px;
     overflow-x: auto;
-    padding: 0 20px;
     -webkit-overflow-scrolling: touch;
+    padding: 0 40px;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
 
-    // Preserve padding at both ends when the row overflows and scrolls
+    &:hover,
+    &:active {
+      scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+    }
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 2px;
+      transition: background 0.3s ease;
+    }
+
+    &:hover::-webkit-scrollbar-thumb,
+    &:active::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    // Spacer nodes so padding is respected when scrolled to either edge
     &::before,
     &::after {
       content: '';
       flex: 0 0 1px;
-    }
-
-    @media #{$desktop} {
-      flex-wrap: nowrap;
-      justify-content: center;
     }
   }
 
@@ -41,8 +62,9 @@
     align-items: center;
     gap: 10px;
     flex: 0 0 auto;
-    opacity: 0.65;
+    opacity: 0.6;
     transition: opacity 0.2s ease;
+    text-decoration: none;
 
     &:hover {
       opacity: 1;
@@ -50,17 +72,17 @@
     }
 
     img {
-    //   height: auto;
-      height: 72px;
-      width: 320px;
+      display: block;
+      height: 60px;
+      width: auto;
+      max-width: 200px;
       object-fit: contain;
     }
   }
 
   .supporter-name {
     font-weight: 500;
-    color: #555;
-    letter-spacing: 0.02em;
-    text-align: center;
+    color: #888;
+    letter-spacing: 0.03em;
   }
 }
