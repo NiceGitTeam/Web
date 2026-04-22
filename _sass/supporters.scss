@@ -22,6 +22,13 @@
     padding: 0 20px;
     -webkit-overflow-scrolling: touch;
 
+    // Preserve padding at both ends when the row overflows and scrolls
+    &::before,
+    &::after {
+      content: '';
+      flex: 0 0 1px;
+    }
+
     @media #{$desktop} {
       flex-wrap: nowrap;
       justify-content: center;
@@ -30,7 +37,9 @@
 
   .supporter {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
     flex: 0 0 auto;
     opacity: 0.65;
     transition: opacity 0.2s ease;
@@ -41,10 +50,17 @@
     }
 
     img {
-      width: auto;
-      height: 36px;
-      max-width: 160px;
+    //   height: auto;
+      height: 72px;
+      width: 320px;
       object-fit: contain;
     }
+  }
+
+  .supporter-name {
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 }

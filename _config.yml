@@ -20,6 +20,23 @@ social:
     - https://github.com/CloudCannon/hydra-jekyll-template
 
 # -----
+# Supporters
+
+supporters:
+  - name: Startmate Launch Club
+    url: https://www.startmate.com/launch-club
+    logo: /images/supporters/startmate.svg
+  - name: Antler Residency
+    url: https://www.antler.co/australia
+    logo: /images/supporters/antler.svg
+  - name: Blackbird Giants
+    url: https://www.blackbird.vc/giants
+    logo: /images/supporters/blackbird.svg
+  - name: CreativeCubes
+    url: https://creativecubes.co
+    logo: /images/supporters/creativecubes.png
+
+# -----
 # Build
 
 timezone: Etc/UTC
