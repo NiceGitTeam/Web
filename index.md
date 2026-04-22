@@ -50,6 +50,8 @@ screen. Just one button is all you need to stay in sync.</p>
    image_alt="Photo of a UX designer seated at their desk"
  %}
 
+ {% include supporters.html %}
+
  <section class="bottom-cta" id="sign-up">
   {% include signup.html %}
  </section>
