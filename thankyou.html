@@ -12,7 +12,7 @@ title: Thank You
 	if (urlParams.get('from') === 'signup') {
 		// Track successful signup
 		if (typeof gtag !== 'undefined') {
-			gtag('event', 'sign_up', { 'method': 'website_form', 'content_type': 'beta_signup' });
+			gtag('event', 'signup_newsletter', { 'method': 'website_form', 'content_type': 'beta_signup' });
 			console.log('Sign up event tracked in Google Analytics');
 		}
 
