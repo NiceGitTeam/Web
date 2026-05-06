@@ -16,7 +16,7 @@ const BUCKET_NAME = 'download.nicegit.com';
 const CONFIG_FILE = '_config.yml';
 const MAC_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+)-universal\.dmg/;
 const WINDOWS_BUILD_PATTERN = /NiceGit-(\d+\.\d+\.\d+) Setup\.exe/;
-const MINIMUM_VERSION = '0.7.0'; // Only show builds >= this version
+const MINIMUM_VERSION = '0.11.0'; // Only show builds >= this version
 
 interface Build {
   version: string;
