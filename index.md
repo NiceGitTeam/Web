@@ -1,11 +1,11 @@
 ---
-title: NiceGit - Source control for collaborative people
+title: NiceGit - Source control for normal people
 description: NiceGit is the simpler, faster way for teams to share and track their files.
 layout: default
 ---
 
 {% include hero.html
-   heading='Source control <strong>for collaborative people</strong>'
+   heading='Source control <strong>for normal people</strong>'
    subtext="NiceGit is the simpler, faster way for teams to share and track their files."
    cta_text="Sign Up for the NiceGit Beta"
    cta_href="#sign-up"
