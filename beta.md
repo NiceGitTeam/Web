@@ -29,7 +29,7 @@ layout: default
    text="<p>Merge conflicts. Broken branches. Designers blocked. Fear of pulling changes. Non-technical contributors avoid the tools entirely or rely on engineers to make routine changes.</p>
    <p>NiceGit fixes that – without replacing the Git setup you already rely on.</p>
    <p><strong>Built to help people contribute confidently without fear of breaking workflows or losing work.</strong></p>"
-   image="/images/UX Designer.jpg"
+   image="/images/UX Designer.png"
    image_alt="Photo of a UX designer seated at their desk"
 %}
 
@@ -86,7 +86,7 @@ layout: default
 {% include feature-section.html
    heading="<strong>Help shape the product</strong>"
    text=help_content
-image="/images/teams at their desks.jpg"
+image="/images/teams at their desks.png"
    image_alt="teams at their desks"
 
 %}
