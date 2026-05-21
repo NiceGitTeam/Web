@@ -91,12 +91,6 @@ image="/images/teams at their desks.jpg"
 
 %}
 
-<div class="container flex">
-   <div class="text editable">
-      <h2><a href="/downloads">Download the NiceGit Desktop app and get started</a></h2>
-   </div>
-</div>
-
 
 {% include supporters.html %}
 
