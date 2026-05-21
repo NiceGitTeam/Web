@@ -72,9 +72,8 @@ layout: default
 {% include feature-section.html
    heading="<strong>What you'll need</strong>"
    text=what_content
-   image="/images/OpenGitHub.gif"
-   image_alt="GitHub login animation"
-   image_class="open-github"
+   image="/images/people collaborating.jpg"
+   image_alt="people collaborating at the desk"
 %}
 
 {% capture help_content %}
@@ -87,6 +86,9 @@ layout: default
 {% include feature-section.html
    heading="<strong>Help shape the product</strong>"
    text=help_content
+image="/images/teams at their desks.jpg"
+   image_alt="teams at their desks"
+
 %}
 
 <div class="container flex">
