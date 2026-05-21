@@ -1,6 +1,6 @@
 ---
 title: Private Beta
-description: Source control for teams that don't all speak Git.
+description: Source control for teams that don't all speak <strong>Git</strong>.
 layout: default
 ---
 
@@ -33,20 +33,31 @@ layout: default
    image_alt="Photo of a UX designer seated at their desk"
 %}
 
-{% capture feedback_content %}
+{% capture built_content %}
    <p>NiceGit is designed for studios, startups, product teams, and contributors where not everyone speaks Git – but everyone needs to stay in sync.</p>
    <p>Works on Windows 10 or later and macOS 12 (Monterey) or later, Intel and ARM.</p>
    <p><a href="/downloads">download the desktop app</a></p>
-    <p>1. Connect your existing repository on GitHub, GitLab, or Bitbucket.</p>
-    <p>2. NiceGit tracks file activity in real time.</p>
-    <p>3. Everyone sees who is working on what before conflicts happen.</p>
-    <p>4. Sync changes safely with one click.</p>
-    <p>5. Git stays fully compatible underneath.</p>
 {% endcapture %}
 
 {% include feature-section.html
    heading="<strong>Built for modern software collaboration</strong>"
-   text=feedback_content
+   text=built_content
+%}
+
+{% capture how_content %}
+   <p>Simple by design</p>
+   <ol class="big-list">
+      <li>Connect your existing repository on GitHub, GitLab, or Bitbucket.</li>
+      <li>NiceGit tracks file activity in real time.</li>
+      <li>Everyone sees who is working on what before conflicts happen.</li>
+      <li>Sync changes safely with one click.</li>
+      <li>Git stays fully compatible underneath.</li>
+</ol>
+{% endcapture %}
+
+{% include feature-section.html
+   heading="<strong>How it works</strong>"
+   text=how_content
 %}
 
 {% capture help_content %}
@@ -67,10 +78,14 @@ layout: default
    </div>
 </div>
 
+{% capture what_content %}
+   <p>Just a project hosted on GitHub, GitLab, or Bitbucket. NiceGit will walk you through the rest – whether you're cloning a fresh copy or opening something already on your device.</p>
+   <p>New to the setup? The <a href="/docs/installation/">Installation guide</a> and <a href="/docs/getting-started">Getting Started Guide</a> have you covered.</p>
+{% endcapture %}
+
 {% include feature-section.html
    heading="What you'll need"
-   text="<p>Just a project hosted on GitHub, GitLab, or Bitbucket. NiceGit will walk you through the rest – whether you're cloning a fresh copy or opening something already on your device.</p>
-   <p>New to the setup? The <a href="/docs/installation/">Installation guide</a> and <a href="/docs/getting-started">Getting Started Guide</a> have you covered.</p>"
+   text=what_content
    image="/images/OpenGitHub.gif"
    image_alt="GitHub login animation"
    image_class="open-github"
