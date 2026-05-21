@@ -18,7 +18,7 @@ layout: default
 {% endcapture %}
 
 {% include feature-section.html
-    heading="<strong>Version control that works for everyone</strong>."
+    heading="<strong>Version control that works for everyone</strong>"
     text=beta_content
     image="/images/Screenshot.png"
     image_alt="A screenshot of the NiceGit Desktop app"
@@ -41,7 +41,7 @@ layout: default
 
 {% include feature-section.html
    heading="<strong>Built for modern software collaboration</strong>"
-   text=built_content"
+   text=built_content
    image="/images/Syncing.gif"
    image_alt="One Button Sync animation"
 %}
@@ -59,7 +59,7 @@ layout: default
 
 {% include feature-section.html
    heading="<strong>How it works</strong>"
-   text=how_content"
+   text=how_content
    image="/images/OpenGitHub.gif"
    image_alt="GitHub login animation"
 %}
