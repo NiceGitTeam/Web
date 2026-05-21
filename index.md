@@ -46,7 +46,7 @@ screen. Just one button is all you need to stay in sync.</p>
  {% include feature-section.html
     heading="Source control that puts the <strong>user first</strong>"
     text=user_first_text
-   image="/images/UX Designer.jpg"
+   image="/images/UX Designer.png"
    image_alt="Photo of a UX designer seated at their desk"
  %}
 
