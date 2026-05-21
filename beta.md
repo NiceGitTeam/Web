@@ -70,7 +70,7 @@ layout: default
 {% endcapture %}
 
 {% include feature-section.html
-   heading="What you'll need"
+   heading="<strong>What you'll need</strong>"
    text=what_content
    image="/images/OpenGitHub.gif"
    image_alt="GitHub login animation"
