@@ -1,6 +1,6 @@
 ---
 title: Private Beta
-description: Source control for teams that don't all speak <strong>Git</strong>.
+description: Source control for people that don't all speak <strong>Git</strong>.
 layout: default
 ---
 
