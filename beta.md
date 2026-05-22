@@ -1,6 +1,6 @@
 ---
 title: Private Beta
-description: Source control for people that don't all speak <strong>Git</strong>.
+description: Source control for teams and people that don't all speak <strong>Git</strong>.
 layout: default
 ---
 
@@ -12,7 +12,7 @@ layout: default
 <div class="content">
 
  {% capture beta_content %}
-   <p>Collaborate on software projects without the fear, confusion, and workflow friction of traditional version control. NiceGit removes the hard parts of Git with one-click syncing, real-time collaboration awareness, and workflows designed for developers and non-developers alike.</p>
+   <p>Collaborate on software projects without the fear, confusion, and workflow friction of traditional version control. NiceGit removes the hard parts of Git with one-click syncing, real-time collaboration awareness, and workflows designed for people – from developers and non-developers alike.</p>
    <p>NiceGit is currently in private beta and evolving with feedback from early users.
    <a href="/downloads">Download the desktop app</a> <a href="/#sign-up"> Join the mailing list</a>.</p>
 {% endcapture %}
