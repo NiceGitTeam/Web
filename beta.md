@@ -14,7 +14,7 @@ layout: default
  {% capture beta_content %}
    <p>Collaborate on software projects without the fear, confusion, and workflow friction of traditional version control. NiceGit removes the hard parts of Git with one-click syncing, real-time collaboration awareness, and workflows designed for developers and non-developers alike.</p>
    <p>NiceGit is currently in private beta and evolving with feedback from early users.
-   <a href="/downloads">download the desktop app</a> <a href="/#sign-up"> Join the mailing list</a>.</p>
+   <a href="/downloads">Download the desktop app</a> <a href="/#sign-up"> Join the mailing list</a>.</p>
 {% endcapture %}
 
 {% include feature-section.html
@@ -79,7 +79,7 @@ layout: default
 {% capture help_content %}
    <p>We’re building NiceGit alongside early users and actively using feedback to improve the experience.</p>
    <p>Works on Windows 10 or later and macOS 12 (Monterey) or later, Intel and ARM.</p>
-   <p><a href="/downloads">download the desktop app</a></p>
+   <p><a href="/downloads">Download the desktop app</a></p>
    <p>Use the feedback button in the bottom-left corner of the Desktop app, or email us directly at <a href="mailto:hello@nicegit.com">hello@nicegit.com</a></p>
 {% endcapture %}
 
