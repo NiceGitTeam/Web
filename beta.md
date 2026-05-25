@@ -1,6 +1,6 @@
 ---
 title: Private Beta
-description: Source control for anyone that doesn't speak <strong>Git</strong>.
+description: Source control for anyone who doesn't speak <strong>Git</strong>.
 layout: default
 ---
 
