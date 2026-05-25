@@ -36,7 +36,7 @@ layout: default
 {% capture built_content %}
    <p>NiceGit is designed for studios, startups, product teams, and contributors where not everyone speaks Git – but everyone needs to stay in sync.</p>
    <p>Works on Windows 10 or later and macOS 12 (Monterey) or later, Intel and ARM.</p>
-   <p><a href="/downloads">download the desktop app</a></p>
+   <p><a href="/downloads">Download the desktop app</a></p>
 {% endcapture %}
 
 {% include feature-section.html
