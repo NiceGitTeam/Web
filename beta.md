@@ -1,6 +1,6 @@
 ---
 title: Private Beta
-description: Source control for teams and people that don't all speak <strong>Git</strong>.
+description: Source control for anyone that doesn't speak <strong>Git</strong>.
 layout: default
 ---
 
@@ -18,7 +18,7 @@ layout: default
 {% endcapture %}
 
 {% include feature-section.html
-    heading="<strong>Version control that works for everyone</strong>"
+    heading="<strong>Version control that you'll actually want to use</strong>"
     text=beta_content
     image="/images/Screenshot.png"
     image_alt="A screenshot of the NiceGit Desktop app"
